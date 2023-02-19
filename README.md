@@ -1,2 +1,3 @@
 # SlimmerAI User Stories
-- [  ] something
+
+- [ ] s
