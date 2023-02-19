@@ -1,2 +1,2 @@
 # SlimmerAI User Stories
-- [ ] 
+- [  ] 
