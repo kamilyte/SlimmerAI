@@ -1,0 +1,25 @@
+.TopMenuBar{
+    height: 10vh;
+}
+
+.TopBarContent {
+    height: 7vh;
+}
+
+.TopBarDropDownSelection {
+    height: 3vh;
+    display: flex;
+    align-content: center;
+}
+
+.TopBarDropDownButton {
+    align-content: center;
+    display: flex;
+    width: 100vh;
+    height: 2vh;
+}
+.DropDownIcon {
+    align-content: center;
+    width: 5vh;
+    height: inherit;
+}
