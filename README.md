@@ -1,3 +1,0 @@
-# SlimmerAI User Stories
-
-- [ ] s
