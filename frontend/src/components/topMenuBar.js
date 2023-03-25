@@ -19,8 +19,4 @@ const TopMenuBar = () => {
     )
 }
 
-const handleClick = () => {
-    setOpenTab(!open);
-}
-
 export default TopMenuBar
