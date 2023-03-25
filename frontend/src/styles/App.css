@@ -1,38 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .App {
+  background: rgb(238, 238, 238);
+  justify-content: left;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  overflow: scroll;
+  height: 100vh;
+  width: 100vw;
+  align-items: flex-start;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.MenuBar {
+  background: bisque;
+  height: inherit;
+  max-width: 18vw;
 }
 
-.App-link {
-  color: #61dafb;
+.Contents{
+  background: rgb(238,238,238);
+  max-width: 90vw;
+  height: inherit;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bar {
+  height: 100vh;
 }
+
+.TopMenuBarBox {
+  background: beige;
+  max-width: inherit;
+  /*@apply col-start-1 row-start-1 row-span-1;*/
+}
+
+.SideMenuBarBox{
+  height: 100vh;
+  max-width: 50vw;
+  background: aquamarine;
+}
+
+
