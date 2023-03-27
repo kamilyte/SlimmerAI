@@ -1,15 +1,14 @@
 .TopMenuBarBox {
-    width: inherit;
+    width: calc(100%);
     display: flex;
     justify-content: center;
     padding-bottom: 1vh;
     padding-top: 1vh;
-    background: rgb(238, 238, 238);
 }
 
 .TopMenuBar{
     height: calc(100%);
-    width: 75vw;
+    width: calc(75%);
     background: rgb(255, 255, 255);
     border-radius: 5px;
     flex-direction: column;

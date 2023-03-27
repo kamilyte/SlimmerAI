@@ -2,23 +2,26 @@
     height: inherit;
     display: flex;
     justify-content: left;
+    width: inherit;
     background: rgb(255,255,255);
 }
 
 .SideMenuBarAlwaysEnabled {
     background: rgb(255,255,255);
     height: inherit;
-    width: 10vw;
+    width: 5vw;
     box-shadow: 0 0 10px #ccc;
 }
 
 .SideBarIconExpandedContent {
     visibility: visible;
-    width: 20vw;
-    background: rgb(2, 255, 255);
+    width: 25vw;
 }
 
 .NoExpansion{
     visibility: hidden;
     width: 0;
+}
+
+.SideBarIcon {
 }
