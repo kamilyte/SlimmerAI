@@ -6,7 +6,7 @@ class SideMenuBar extends Component {
 
     handleClick = () => {
         this.setState({ clicked: !this.state.clicked })
-        console.log("Clicked Now")
+        console.log("Clicked")
     }
 
     render() {
