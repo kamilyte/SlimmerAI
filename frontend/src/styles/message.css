@@ -1,15 +1,19 @@
 
 .MessageButton {
-    font-size: 13px;
-    height: fit-content;
+    border: 1px solid #73a5e2;
+    border-radius: 20px;
     width: 23vw;
-    padding: 0px 10px;
+    height: 10vw;
     cursor: pointer;
-    display: inline-block;
+    font-size: 11px;
+    padding: 0px 10px;
+    display: flex;
     text-align: left;
+    color: #838787;
+    margin-top: 10px;
 }
 
 .MessageButton:hover {
-    background: #BEC5C6;
+    background: #f3f7f7;
 }
 

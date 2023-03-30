@@ -83,7 +83,7 @@ class SideMenuBar extends Component {
                     content 1
                 </div>
                 <div className={this.state.clicked.messagesIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
-                    <Message text="Message Content" />
+                    <Message text="just something that is written here idk i just need it to be long" />
                 </div>
                 <div className={this.state.clicked.savedSearchIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
                     content 3
