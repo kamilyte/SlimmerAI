@@ -11,6 +11,11 @@
     text-align: left;
     color: #838787;
     margin-top: 10px;
+    overflow: auto;
+}
+
+.MessageButton::-webkit-scrollbar {
+    display: none;
 }
 
 .MessageButton:hover {
