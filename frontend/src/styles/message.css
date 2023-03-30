@@ -13,6 +13,8 @@
     margin-top: 10px;
     overflow: auto;
     margin-left: 1vh;
+    padding-top: 0.5vh;
+    padding-bottom: 1vh;
 }
 
 .MessageButton::-webkit-scrollbar {
