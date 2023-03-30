@@ -55,6 +55,13 @@ class SideMenuBar extends Component {
     }
 
     render() {
+
+        const textList = []
+        textList.push("just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long")
+        textList.push("just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long")
+        textList.push("just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long")
+        const sidebarContent = textList?.length ? textList.map(txt => <Message text={txt} />) : null
+
         return (
             <div className="SideMenuBar">
                 <div className="SideMenuBarAlwaysEnabled">
@@ -83,11 +90,7 @@ class SideMenuBar extends Component {
                     content 1
                 </div>
                 <div className={this.state.clicked.messagesIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
-                    <Message text="just something that is written here idk i just need it to be long just something that is written here idk i just need it to be long
-                    just something that is written here idk i just need it to be long
-                    just something that is written here idk i just need it to be long
-                    just something that is written here idk i just need it to be long
-                    just something that is written here idk i just need it to be long" />
+                    {sidebarContent}
                 </div>
                 <div className={this.state.clicked.savedSearchIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
                     content 3

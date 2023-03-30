@@ -12,6 +12,7 @@
     color: #838787;
     margin-top: 10px;
     overflow: auto;
+    margin-left: 1vh;
 }
 
 .MessageButton::-webkit-scrollbar {

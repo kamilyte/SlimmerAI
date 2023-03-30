@@ -16,7 +16,8 @@
 .SideBarIconExpandedContent {
     visibility: visible;
     width: 25vw;
-    display: flex;
+    display: inline-block;
+    align-items: center;
     justify-content: center;
 }
 
