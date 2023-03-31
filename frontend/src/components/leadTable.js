@@ -3,6 +3,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import LinkIcon from '@mui/icons-material/Link';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
+import StarButton from "./starButton";
 
 
 function createData(profile, name, ranking, industry, linkedin, leadList) {
@@ -16,8 +17,8 @@ const leads = [
 const LeadTable = () => {
     const [isFilled, setIsFilled] = useState(false)
 
-    const handleStarClick = () => {
-        setIsFilled(!isFilled)
+const handleStarClick = () => {
+        setIsFilled(true)
     }
 
     return (
@@ -39,9 +40,7 @@ const LeadTable = () => {
                             <TableCell component="th" scope="row">{lead.profile}</TableCell>
                             <TableCell>{lead.name}</TableCell>
                             <TableCell>
-                                <IconButton onCLick={handleStarClick}>
-                                    { isFilled ? <StarIcon /> : <StarBorderIcon />}
-                                </IconButton>
+                                <StarButton/>
                             </TableCell>
                             <TableCell>{lead.industry}</TableCell>
                             <TableCell>
