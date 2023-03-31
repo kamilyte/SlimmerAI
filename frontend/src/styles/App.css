@@ -31,5 +31,10 @@
   max-width: inherit;
 }
 
+.TableContent {
+  display:flex;
+  margin-left: 2vh;
+}
+
 
 
