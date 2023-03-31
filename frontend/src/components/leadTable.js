@@ -1,6 +1,9 @@
-import React from "react"
+import React, {useState} from "react"
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from "@mui/material"
 import LinkIcon from '@mui/icons-material/Link';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import StarIcon from '@mui/icons-material/Star';
+
 
 function createData(profile, name, ranking, industry, linkedin, leadList) {
     return { profile, name, ranking, industry, linkedin, leadList }
@@ -11,6 +14,11 @@ const leads = [
 ]
 
 const LeadTable = () => {
+    const [isFilled, setIsFilled] = useState(false)
+
+    const handleStarClick = () => {
+        setIsFilled(!isFilled)
+    }
 
     return (
         <TableContainer component={Paper}>
@@ -30,7 +38,11 @@ const LeadTable = () => {
                         <TableRow key={lead.profile} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell component="th" scope="row">{lead.profile}</TableCell>
                             <TableCell>{lead.name}</TableCell>
-                            <TableCell>{lead.ranking}</TableCell>
+                            <TableCell>
+                                <IconButton onCLick={handleStarClick}>
+                                    { isFilled ? <StarIcon /> : <StarBorderIcon />}
+                                </IconButton>
+                            </TableCell>
                             <TableCell>{lead.industry}</TableCell>
                             <TableCell>
                                 <a href={lead.linkedin} target="_blank" rel="noreferrer">
