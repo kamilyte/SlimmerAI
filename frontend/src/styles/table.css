@@ -1,0 +1,26 @@
+.TableContainer {
+    width: calc(100%);
+    max-height: inherit;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+}
+
+.Table {
+    max-height: calc(100%);
+    width: calc(75%);
+    border-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+TableHead {
+    width: inherit;
+}
+
+.TableBody {
+    width: inherit;
+}

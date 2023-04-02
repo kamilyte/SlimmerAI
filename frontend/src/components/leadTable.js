@@ -1,106 +1,10 @@
 import React, {useEffect, useState} from "react"
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from "@mui/material"
-import LinkIcon from '@mui/icons-material/Link';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import StarIcon from '@mui/icons-material/Star';
-import StarButton from "./starButton";
-import {DataGrid} from "@mui/x-data-grid";
 import FetchLeadsRequest from "../functions/fetchLeadsRequest";
-import LeadTableBodyContent from "./leadTableBodyContent";
+import '../styles/table.css';
+import StarButton from "./starButton";
 
 function LeadTable() {
-
-    const data = [
-        {
-            "company": "comp",
-            "firstname": "fname",
-            "id": "12a",
-            "lastname": "lname",
-            "lead_list": "list",
-            "linkedin": "linked",
-            "position": "pos",
-            "profile_picture": "abc",
-            "ranking": null
-        },
-        {
-            "company": "comp",
-            "firstname": "fname",
-            "id": "12eaaaa",
-            "lastname": "lname",
-            "lead_list": "list",
-            "linkedin": "linked",
-            "position": "pos",
-            "profile_picture": "abc",
-            "ranking": null
-        },
-        {
-            "company": "comp",
-            "firstname": "fname",
-            "id": "12eaaap",
-            "lastname": "lname",
-            "lead_list": "list",
-            "linkedin": "linked",
-            "position": "pos",
-            "profile_picture": "abc",
-            "ranking": null
-        },
-        {
-            "company": "comp",
-            "firstname": "fname",
-            "id": "12eas",
-            "lastname": "lname",
-            "lead_list": "list",
-            "linkedin": "linked",
-            "position": "pos",
-            "profile_picture": "abc",
-            "ranking": 0
-        },
-        {
-            "company": "comp",
-            "firstname": "fname",
-            "id": "12ee",
-            "lastname": "lname",
-            "lead_list": "list",
-            "linkedin": "linked",
-            "position": "pos",
-            "profile_picture": "abc",
-            "ranking": null
-        },
-        {
-            "company": "comp",
-            "firstname": "fname",
-            "id": "12efff",
-            "lastname": "lname",
-            "lead_list": "list",
-            "linkedin": "linked",
-            "position": "pos",
-            "profile_picture": "abc",
-            "ranking": null
-        },
-        {
-            "company": "comp",
-            "firstname": "fname",
-            "id": "12kkkkl",
-            "lastname": "lname",
-            "lead_list": "list",
-            "linkedin": "linked",
-            "position": "pos",
-            "profile_picture": "abc",
-            "ranking": 0
-        },
-        {
-            "company": "comp",
-            "firstname": "fname",
-            "id": "12ll",
-            "lastname": "lname",
-            "lead_list": "list",
-            "linkedin": "linked",
-            "position": "pos",
-            "profile_picture": "abc",
-            "ranking": 3
-        }
-    ]
-
     const [leadList, setLeadList] = useState([]);
 
     useEffect(() => {
@@ -128,7 +32,8 @@ function LeadTable() {
                             <TableHead>
                                 <TableRow>
                                     <TableCell>Profile</TableCell>
-                                    <TableCell>Name</TableCell>
+                                    <TableCell>First Name</TableCell>
+                                    <TableCell>Last Name</TableCell>
                                     <TableCell>Ranking</TableCell>
                                     <TableCell>Industry</TableCell>
                                     <TableCell>Linkedin</TableCell>
@@ -143,7 +48,7 @@ function LeadTable() {
                                             <TableCell>{row.profile_picture}</TableCell>
                                             <TableCell>{row.firstname}</TableCell>
                                             <TableCell>{row.lastname}</TableCell>
-                                            <TableCell>Rank</TableCell>
+                                            <TableCell> <StarButton /> </TableCell>
                                             <TableCell>{row.linkedin}</TableCell>
                                             <TableCell>{row.position}</TableCell>
                                             <TableCell>{row.company}</TableCell>

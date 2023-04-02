@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 .App {
+  /*background: rgb(238, 238, 238);*/
   background: rgb(238, 238, 238);
+
   justify-content: left;
   text-align: center;
-  overflow: scroll;
+  overflow: hidden;
   display: flex;
+  max-height: 100vh;
   height: 100vh;
+  max-width: 100vw;
   width: 100vw;
 }
 .MenuBar {
@@ -20,7 +24,9 @@
 .Contents{
   align-content: center;
   width: 90vw;
-  height: inherit;
+  max-height: inherit;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .bar {
@@ -32,9 +38,10 @@
 }
 
 .TableContent {
-  display:flex;
-  margin-left: 2vh;
+  align-content: center;
+  max-width: 90vw;
 }
+
 
 
 
