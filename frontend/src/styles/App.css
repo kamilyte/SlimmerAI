@@ -22,6 +22,7 @@
 }
 
 .Contents{
+  overflow: scroll;
   align-content: center;
   width: 90vw;
   max-height: inherit;
@@ -40,6 +41,7 @@
 .TableContent {
   align-content: center;
   max-width: 90vw;
+  overflow: auto;
 }
 
 
