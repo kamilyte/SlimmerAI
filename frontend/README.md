@@ -11,6 +11,10 @@ The port is hardcoded in src/functions/fetchLeadsRequest.js it may be changed ma
 
 The following necessary packages will need to be installed:
 
+### npm
+
+#### `npm install`
+
 ### Tailwind CSS
 
 #### `npm install -D tailwindcss`
