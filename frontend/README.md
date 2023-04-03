@@ -1,18 +1,33 @@
-# Getting Started with Create React App
+# Starting up the Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installations
 
-## Available Scripts
+The following necessary packages will need to be installed:
 
-In the project directory, you can run:
+### Tailwind CSS
 
-### `npm start`
+#### `npm install -D tailwindcss`
+
+### Material UI
+
+#### `npm install @mui/material @emotion/react @emotion/styled`
+
+#### `npm install @mui/material @mui/styled-engine-sc styled-components`
+
+
+## Running the frontend
+
+In the project directory, run the following command to start up the application:
+
+#### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+
+
+
+## Other commands: 
 
 ### `npm test`
 
