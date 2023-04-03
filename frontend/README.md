@@ -1,5 +1,12 @@
 # Starting up the Frontend
 
+## DISCLAIMER
+
+The frontend curently only sends requests to the port 5000 on the local machine. This means if the backend is not hosted
+on the same port there will be no response received and some of the frontend functionality will be accessbile.
+
+The port is hardcoded in src/functions/fetchLeadsRequest.js it may be changed manually as a last resort.
+
 ## Installations
 
 The following necessary packages will need to be installed:
@@ -23,7 +30,6 @@ In the project directory, run the following command to start up the application:
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
 
 
 
