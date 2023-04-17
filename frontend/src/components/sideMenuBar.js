@@ -72,26 +72,18 @@ class SideMenuBar extends Component {
         return (
             <div className="SideMenuBar">
                 <div className="SideMenuBarAlwaysEnabled">
-                    <button type="button" onClick={this.handleImportClick} className="SideBarIcon place-content-center">
-                        <IconButton aria-label="import" size="large">
-                            <ImportContactsIcon fontSize="inherit" />
-                        </IconButton>
-                    </button>
-                    <button type="button" onClick={this.handleMessagesClick} className="SideBarIcon place-content-center">
-                        <IconButton aria-label="messages" size="large">
-                            <InsertCommentIcon fontSize="inherit" />
-                        </IconButton>
-                    </button>
-                    <button type="button" onClick={this.handleSavedSearchClick} className="SideBarIcon place-content-center">
-                        <IconButton aria-label="saved-search" size="large">
-                            <SavedSearchIcon fontSize="inherit" />
-                        </IconButton>
-                    </button>
-                    <button type="button" onClick={this.handleShareClick} className="SideBarIcon place-content-center">
-                        <IconButton aria-label="share" size="large">
-                            <ShareIcon fontSize="inherit" />
-                        </IconButton>
-                    </button>
+                     <IconButton onClick={this.handleImportClick} aria-label="import" size="large" className="SideBarIcon place-content-center">
+                        <ImportContactsIcon fontSize="inherit" />
+                    </IconButton>
+                    <IconButton onClick={this.handleMessagesClick} aria-label="messages" size="large" className="SideBarIcon place-content-center">
+                        <InsertCommentIcon fontSize="inherit" />
+                    </IconButton>
+                    <IconButton onClick={this.handleSavedSearchClick} aria-label="saved-search" size="large" className="SideBarIcon place-content-center">
+                        <SavedSearchIcon fontSize="inherit" />
+                    </IconButton>
+                    <IconButton onClick={this.handleShareClick} aria-label="share" size="large" className="SideBarIcon place-content-center">
+                        <ShareIcon fontSize="inherit" />
+                    </IconButton>
                 </div>
                 <div className={this.state.clicked.importIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
                     content 1
