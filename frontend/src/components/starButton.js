@@ -15,7 +15,7 @@ class StarButton extends Component {
 
     render() {
         return (
-            <IconButton onClick={this.handleClick}>
+            <IconButton onClick={this.handleClick} size="small">
                 { this.state.clicked ? <StarIcon/> : <StarBorderIcon/>}
             </IconButton>
         )

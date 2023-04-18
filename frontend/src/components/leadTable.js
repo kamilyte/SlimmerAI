@@ -3,6 +3,7 @@ import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper
 import FetchLeadsRequest from "../functions/fetchLeadsRequest";
 import '../styles/table.css';
 import StarButton from "./starButton";
+import LinkIcon from '@mui/icons-material/Link';
 
 function LeadTable() {
     const [leadList, setLeadList] = useState([]);
@@ -17,9 +18,6 @@ function LeadTable() {
 
     const [isFilled, setIsFilled] = useState(false)
 
-    const handleStarClick = () => {
-        setIsFilled(true)
-    }
 
     function LeadTable() {
         if (leadList != null) {
@@ -35,7 +33,7 @@ function LeadTable() {
                                     <TableCell>First Name</TableCell>
                                     <TableCell>Last Name</TableCell>
                                     <TableCell>Ranking</TableCell>
-                                    <TableCell>Industry</TableCell>
+                                    <TableCell>Position</TableCell>
                                     <TableCell>Linkedin</TableCell>
                                     <TableCell>Company</TableCell>
                                 </TableRow>
@@ -49,8 +47,14 @@ function LeadTable() {
                                             <TableCell>{row.firstname}</TableCell>
                                             <TableCell>{row.lastname}</TableCell>
                                             <TableCell> <StarButton /> </TableCell>
-                                            <TableCell>{row.linkedin}</TableCell>
                                             <TableCell>{row.position}</TableCell>
+                                            <TableCell>
+                                                <a href={row.linkedin} target="_blank" rel="noreferrer">
+                                                    <IconButton>
+                                                        <LinkIcon />
+                                                    </IconButton>
+                                                </a>
+                                            </TableCell>
                                             <TableCell>{row.company}</TableCell>
                                         </TableRow>
                                     ))

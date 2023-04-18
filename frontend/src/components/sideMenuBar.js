@@ -72,16 +72,16 @@ class SideMenuBar extends Component {
         return (
             <div className="SideMenuBar">
                 <div className="SideMenuBarAlwaysEnabled">
-                     <IconButton onClick={this.handleImportClick} aria-label="import" size="large" className="SideBarIcon place-content-center">
+                     <IconButton onClick={this.handleImportClick} aria-label="import" size="large" className="SideBarIcon place-content-center" title="Import leads">
                         <ImportContactsIcon fontSize="inherit" />
                     </IconButton>
-                    <IconButton onClick={this.handleMessagesClick} aria-label="messages" size="large" className="SideBarIcon place-content-center">
+                    <IconButton onClick={this.handleMessagesClick} aria-label="messages" size="large" className="SideBarIcon place-content-center" title="Messages">
                         <InsertCommentIcon fontSize="inherit" />
                     </IconButton>
-                    <IconButton onClick={this.handleSavedSearchClick} aria-label="saved-search" size="large" className="SideBarIcon place-content-center">
+                    <IconButton onClick={this.handleSavedSearchClick} aria-label="saved-search" size="large" className="SideBarIcon place-content-center" title="Saved searches">
                         <SavedSearchIcon fontSize="inherit" />
                     </IconButton>
-                    <IconButton onClick={this.handleShareClick} aria-label="share" size="large" className="SideBarIcon place-content-center">
+                    <IconButton onClick={this.handleShareClick} aria-label="share" size="large" className="SideBarIcon place-content-center" title="Share">
                         <ShareIcon fontSize="inherit" />
                     </IconButton>
                 </div>

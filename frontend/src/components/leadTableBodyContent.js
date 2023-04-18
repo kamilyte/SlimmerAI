@@ -23,7 +23,7 @@ function LeadTableBodyContent(props) {
                 </TableCell>
                 <TableCell>{lead.lead_list}</TableCell>
             </TableRow>)
-        )</>
+        </>
     })
 }
 
