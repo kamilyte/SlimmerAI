@@ -3,6 +3,7 @@ import TopMenuBar from "./components/topMenuBar.js";
 import SideMenuBar from "./components/sideMenuBar";
 import LeadTable from './components/leadTable';
 import Leads from './components/leads';
+import Popup from './components/popup';
 
 function App() {
     return (
@@ -20,6 +21,9 @@ function App() {
                         <LeadTable />
                         <Leads />
                     </div>
+                </div>
+                <div>
+                    <Popup />
                 </div>
             </div>
         </div>

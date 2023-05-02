@@ -1,0 +1,28 @@
+
+.Background {
+    position: absolute;
+    background-color: aliceblue;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 95%;
+    opacity: 0;
+    display: -webkit-box;
+    margin-left: auto;
+    
+}
+
+.PopupInfo {
+    margin: auto;
+    background-color: aqua;
+    height: 50%;
+    width: 50%;
+}
+
+.Background:hover {
+    opacity: 0.9;
+}
+
+
