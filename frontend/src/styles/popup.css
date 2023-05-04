@@ -1,28 +1,30 @@
 
-.Background {
+.Popup {
     position: absolute;
-    background-color: aliceblue;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     height: 100%;
     width: 95%;
-    opacity: 0;
     display: -webkit-box;
     margin-left: auto;
-    
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
 }
 
-.PopupInfo {
+.PopupCard {
     margin: auto;
     background-color: aqua;
-    height: 50%;
-    width: 50%;
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
 }
 
-.Background:hover {
-    opacity: 0.9;
-}
 
 

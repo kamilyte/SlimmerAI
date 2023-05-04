@@ -22,9 +22,7 @@ function App() {
                         <Leads />
                     </div>
                 </div>
-                <div>
-                    <Popup />
-                </div>
+                
             </div>
         </div>
     );

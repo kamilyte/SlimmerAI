@@ -9,7 +9,6 @@ import '../styles/message.css'
 import Message from "./message";
 
 
-
 class SideMenuBar extends Component {
     state = {clicked: {
         importIcon: false,

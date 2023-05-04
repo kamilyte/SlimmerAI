@@ -3,10 +3,12 @@ import '../styles/popup.css'
 
 class Popup extends Component {
 
+
+
     render() {
         return (
-            <div className="Background place-content-center">
-                <div className="PopupInfo">
+            <div className="Popup">
+                <div className="PopupCard">
                     popup
                 </div>
             </div>

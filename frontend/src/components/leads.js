@@ -1,10 +1,12 @@
-import React, {useState} from "react"
+import React, {useEffect, useState, useRef} from "react"
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from "@mui/material"
 import LinkIcon from '@mui/icons-material/Link';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
 import StarButton from "./starButton";
 import StarButtonRank from "./starButtonRank";
+import '../styles/table.css'
+import Popup from "./popup";
 
 // THIS CLASS IS JUST FOR TESTING LOOK OF TABLE WHEN I DONT HAVE ACCESS TO THE DB
 
@@ -18,7 +20,24 @@ const leads = [
 
 const Leads = () => {
     const [isFilled, setIsFilled] = useState(false)
+    const [isPopupOpen, setIsPopupOpen] = useState(false)
+    const buttonRef = useRef()
 
+    const handleProfileClick = () => {
+        setIsPopupOpen(!isPopupOpen)
+    }
+
+    useEffect(() => {
+
+        let handler = (e) => {
+            if (!buttonRef.current.contains(e.target)) {
+                setIsPopupOpen(false)
+            }
+        }
+
+        document.body.addEventListener('click', handler)
+        return () => (document.body.removeEventListener('click', handler))
+    })
 
     return (
         <TableContainer component={Paper}>
@@ -36,7 +55,13 @@ const Leads = () => {
                 <TableBody>
                     {leads.map((lead) => (
                         <TableRow key={lead.profile} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                            <TableCell component="th" scope="row">{lead.profile}</TableCell>
+                            <TableCell component="th" scope="row">
+                                <button ref={buttonRef} onClick={handleProfileClick} className="Profile" id="popup">
+                                    <h2>
+                                        {((lead.name)[0]).concat('K')}
+                                    </h2>
+                                </button>
+                            </TableCell>
                             <TableCell>{lead.name}</TableCell>
                             <TableCell>
                                 <StarButtonRank/>
@@ -50,7 +75,11 @@ const Leads = () => {
                                 </a>
                             </TableCell>
                             <TableCell>{lead.leadList}</TableCell>
+                            {
+                                isPopupOpen && (<Popup/>)
+                            }
                         </TableRow>
+                        
                     ))}
                 </TableBody>
             </Table>

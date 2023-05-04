@@ -4,6 +4,7 @@ import FetchLeadsRequest from "../functions/fetchLeadsRequest";
 import '../styles/table.css';
 import StarButton from "./starButton";
 import LinkIcon from '@mui/icons-material/Link';
+import '../styles/table.css'
 
 function LeadTable() {
     const [leadList, setLeadList] = useState([]);
@@ -43,7 +44,13 @@ function LeadTable() {
                                         <TableRow
                                         key={row.id}
                                         sx={{'&:last-child td, &:last-child th': { border: 0 }}}>
-                                            <TableCell>{row.profile_picture}</TableCell>
+                                        <TableCell>
+                                        <button className="Profile" id="popup">
+                                            <h2>
+                                                {((row.firstname)[0]).concat(row.lastname)}
+                                            </h2>
+                                        </button>
+                                        </TableCell>
                                             <TableCell>{row.firstname}</TableCell>
                                             <TableCell>{row.lastname}</TableCell>
                                             <TableCell> <StarButton /> </TableCell>
