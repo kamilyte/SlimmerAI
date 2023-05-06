@@ -15,17 +15,86 @@
 
 
 .PopupCard {
+    position: relative;
     margin: auto;
-    background-color: aqua;
+    background-color: rgb(255,255,255);
     height: 80%;
-    width: 80%;
+    width: 60%;
     border-radius: 10px;
     box-shadow: 0 0 10px #ccc;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(100px, auto);
 }
+
+.Close {
+    position: absolute;
+    top: 0px;
+    float: right;
+}
+
+.Edit {
+    position: absolute;
+    top: 0px;
+    float: right;
+}
+
+.Popup-profile {
+    position: absolute;
+    height: 12.5vw;
+    width: 12.5vw;
+    background-color: #838dea;
+    border-radius: 50%;
+    top: 0vw;
+    left: 0vw;
+    margin: 3vw;
+}
+
+.Popup-name {
+    position: absolute;
+    font-size: 4vw;
+    font-weight: 500;
+    color: black;
+    left: 18vw;
+    margin-top: 2vw;
+}
+
+.Popup-position {
+    position: absolute;
+    font-size: 2vw;
+    font-weight: 200;
+    color: #101d92;
+    left: 18vw;
+    margin-top: 7vw;
+}
+
+.Location {
+    position: absolute;
+    left: 18vw;
+    margin-top: 10vw;
+    height: 2vw;
+}
+
+.Location h2 {
+    position: relative;
+    font-size: 1.25vw;
+    font-weight: 500;
+    color: #bdbdbd;
+    left: 1.75vw;
+    top: 0.1vw;
+}
+
+.LeadList {
+    position: absolute;
+    background-color:rgb(234, 232, 232);
+    height: 1.5vw;
+    width: 15vw;
+    top: 16.5vw;
+    left: 2vw;
+    font-size: 1vw;
+    font-weight: 450;
+    font-style: italic;
+    border-radius: 3px;
+    color: gray;
+}
+
 
 
 
