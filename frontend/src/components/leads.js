@@ -54,7 +54,7 @@ const Leads = () => {
                     {leads.map((lead) => (
                         <TableRow key={lead.profile} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell component="th" scope="row">
-                                <button onClick={handleProfileClick} className="Profile" id="popup" >
+                                <button onClick={handleProfileClick} className="Profile">
                                     <h2>
                                         {((lead.name)[0]).concat('K')}
                                     </h2>
