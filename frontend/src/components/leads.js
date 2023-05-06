@@ -23,19 +23,15 @@ const leads = [
 const Leads = () => {
     const [isFilled, setIsFilled] = useState(false)
     const [isPopupOpen, setIsPopupOpen] = useState(false)
-    const buttonRef = useRef()
 
     const handleProfileClick = () => {
         setIsPopupOpen(!isPopupOpen)
+
     }
 
-    const handlePopupClick = e => {
-        e.preventDefault()
-        if (e.target === e.currentTarget) {
-            setIsPopupOpen(false)
-        }
+    const handleProfileEnter = () => {
+        setIsPopupOpen(false)
     }
-
 
     return (
         <TableContainer component={Paper}>
@@ -54,7 +50,7 @@ const Leads = () => {
                     {leads.map((lead) => (
                         <TableRow key={lead.profile} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell component="th" scope="row">
-                                <button onClick={handleProfileClick} className="Profile">
+                                <button onClick={handleProfileClick} className="Profile" onMouseEnter={handleProfileEnter}>
                                     <h2>
                                         {((lead.name)[0]).concat('K')}
                                     </h2>
@@ -75,9 +71,7 @@ const Leads = () => {
                             <TableCell>{lead.leadList}</TableCell>
                             {
                                 isPopupOpen && (
-                                <div className="Popup" onClick={handlePopupClick}>
-                                    <Popup/>
-                                </div>)
+                                    <Popup/>)
                             }
                         </TableRow>
                         

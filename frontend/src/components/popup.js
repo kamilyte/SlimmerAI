@@ -14,10 +14,18 @@ class Popup extends Component {
     handleCloseClick = () => {
         this.setState({popup: false})
     }
-
+    
+    handlePopupClick = e => {
+        e.preventDefault()
+        if (e.target === e.currentTarget) {
+            this.setState({popup: false})
+        }
+    }
 
     render() {
         return (
+                this.state.popup && ( 
+            <div className="Popup" onClick={this.handlePopupClick} id="popup-background">
                 <div className="PopupCard">
                     <img className="Popup-profile">
                     </img>
@@ -28,7 +36,7 @@ class Popup extends Component {
                         Position @ Company
                     </h2>
                     <div className="Location">
-                        <LocationOnIcon sx={{position: "absolute", color: grey[400], fontSize: "1.5vw", left: "0vw", top: "0.25vw"}}/>
+                        <LocationOnIcon sx={{position: "absolute", color: grey[400], fontSize: "1.25vw", left: "0vw", top: "0.25vw"}}/>
                         <h2>
                             Location, Country
                         </h2>
@@ -36,13 +44,21 @@ class Popup extends Component {
                     <div className="LeadList">
                         Lead-List
                     </div>
-                    <IconButton className="Close" size="small">
+                    <div className="Work">
+                        <h2>
+                            WORK
+                        </h2>
+                        <img>
+                        </img>
+                    </div>
+                    <IconButton className="Close" size="small" onClick={this.handleCloseClick}>
                         <CloseIcon fontSize="inherit"/>
                     </IconButton>
                     <IconButton className="Edit" size="small">
                         <EditIcon fontSize="inherit"/>
                     </IconButton>
-                </div>
+                </div> 
+            </div>)
         )
     }
 }

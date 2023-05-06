@@ -6,7 +6,6 @@ import StarButton from "./starButton";
 import LinkIcon from '@mui/icons-material/Link';
 import '../styles/table.css'
 import Popup from "./popup";
-import '../styles/popup.css'
 
 function LeadTable() {
     const [leadList, setLeadList] = useState([]);
@@ -24,15 +23,9 @@ function LeadTable() {
         setIsPopupOpen(!isPopupOpen)
     }
 
-    const handlePopupClick = e => {
-        e.preventDefault()
-        if (e.target === e.currentTarget) {
-            setIsPopupOpen(false)
-        }
+    const handleProfileEnter = () => {
+        setIsPopupOpen(false)
     }
-
-    const [isFilled, setIsFilled] = useState(false)
-
 
     function LeadTable() {
         if (leadList != null) {
@@ -59,7 +52,7 @@ function LeadTable() {
                                         key={row.id}
                                         sx={{'&:last-child td, &:last-child th': { border: 0 }}}>
                                         <TableCell>
-                                        <button onClick={handleProfileClick} className="Profile">
+                                        <button onClick={handleProfileClick} className="Profile" onMouseEnter={handleProfileEnter}>
                                             <h2>
                                                 {((row.firstname)[0]).concat(row.lastname)}
                                             </h2>
@@ -78,10 +71,7 @@ function LeadTable() {
                                             </TableCell>
                                             <TableCell>{row.company}</TableCell>
                                             {
-                                                isPopupOpen && (
-                                                <div className="Popup" onClick={handlePopupClick}>
-                                                    <Popup/>
-                                                </div>)
+                                                isPopupOpen && (<Popup/>)
                                             }
                                         </TableRow>
                                     ))

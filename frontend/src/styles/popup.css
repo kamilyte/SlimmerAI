@@ -13,6 +13,9 @@
     color: #fff;
 }
 
+.NoPopup {
+    visibility: hidden;
+}
 
 .PopupCard {
     position: relative;
@@ -49,7 +52,7 @@
 
 .Popup-name {
     position: absolute;
-    font-size: 4vw;
+    font-size: 3.5vw;
     font-weight: 500;
     color: black;
     left: 18vw;
@@ -58,26 +61,26 @@
 
 .Popup-position {
     position: absolute;
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 200;
     color: #101d92;
     left: 18vw;
-    margin-top: 7vw;
+    margin-top: 6.5vw;
 }
 
 .Location {
     position: absolute;
     left: 18vw;
-    margin-top: 10vw;
-    height: 2vw;
+    margin-top: 9vw;
+    height: 1.75vw;
 }
 
 .Location h2 {
     position: relative;
-    font-size: 1.25vw;
+    font-size: 1vw;
     font-weight: 500;
     color: #bdbdbd;
-    left: 1.75vw;
+    left: 1.5vw;
     top: 0.1vw;
 }
 
@@ -93,6 +96,37 @@
     font-style: italic;
     border-radius: 3px;
     color: gray;
+}
+
+.Work {
+    position: absolute;
+    background-color: #101d9200;
+    height: 1.5vw;
+    width: 16vw;
+    top: 18.5vw;
+    left: 2vw;
+}
+
+.Work h2 {
+    position: absolute;
+    font-size: 0.9vw;
+    font-weight: 700;
+    color: #bdbdbd;
+    float: left;
+}
+
+.Work img {
+    position: relative;
+    float: left;
+    top: 0.9vw;
+    left: 3.25vw;
+    background-color: #bdbdbd;
+    height: 0.1vw;
+    width: 12.5vw;
+}
+
+.Work-content {
+
 }
 
 
