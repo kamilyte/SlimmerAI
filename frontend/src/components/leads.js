@@ -7,6 +7,8 @@ import StarButton from "./starButton";
 import StarButtonRank from "./starButtonRank";
 import '../styles/table.css'
 import Popup from "./popup";
+import Profile from "./profile";
+import '../styles/popup.css'
 
 // THIS CLASS IS JUST FOR TESTING LOOK OF TABLE WHEN I DONT HAVE ACCESS TO THE DB
 
@@ -27,17 +29,13 @@ const Leads = () => {
         setIsPopupOpen(!isPopupOpen)
     }
 
-    useEffect(() => {
-
-        let handler = (e) => {
-            if (!buttonRef.current.contains(e.target)) {
-                setIsPopupOpen(false)
-            }
+    const handlePopupClick = e => {
+        e.preventDefault()
+        if (e.target === e.currentTarget) {
+            setIsPopupOpen(false)
         }
+    }
 
-        document.body.addEventListener('click', handler)
-        return () => (document.body.removeEventListener('click', handler))
-    })
 
     return (
         <TableContainer component={Paper}>
@@ -56,7 +54,7 @@ const Leads = () => {
                     {leads.map((lead) => (
                         <TableRow key={lead.profile} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell component="th" scope="row">
-                                <button ref={buttonRef} onClick={handleProfileClick} className="Profile" id="popup">
+                                <button onClick={handleProfileClick} className="Profile" id="popup" >
                                     <h2>
                                         {((lead.name)[0]).concat('K')}
                                     </h2>
@@ -76,7 +74,10 @@ const Leads = () => {
                             </TableCell>
                             <TableCell>{lead.leadList}</TableCell>
                             {
-                                isPopupOpen && (<Popup/>)
+                                isPopupOpen && (
+                                <div className="Popup" onClick={handlePopupClick}>
+                                    <Popup/>
+                                </div>)
                             }
                         </TableRow>
                         
