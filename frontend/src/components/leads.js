@@ -4,11 +4,11 @@ import LinkIcon from '@mui/icons-material/Link';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import StarIcon from '@mui/icons-material/Star';
 import StarButton from "./starButton";
-import StarButtonRank from "./starButtonRank";
 import '../styles/table.css'
 import Popup from "./popup";
 import Profile from "./profile";
 import '../styles/popup.css'
+import StarRating from "./starRating";
 
 // THIS CLASS IS JUST FOR TESTING LOOK OF TABLE WHEN I DONT HAVE ACCESS TO THE DB
 
@@ -58,7 +58,7 @@ const Leads = () => {
                             </TableCell>
                             <TableCell>{lead.name}</TableCell>
                             <TableCell>
-                                <StarButtonRank/>
+                                <StarRating/>
                             </TableCell>
                             <TableCell>{lead.industry}</TableCell>
                             <TableCell>
