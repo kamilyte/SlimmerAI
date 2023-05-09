@@ -7,14 +7,10 @@
 }
 
 .TopMenuBar{
-    width: calc(90%);
+    width: calc(100%);
     background: rgb(255, 255, 255);
     border-radius: 5px;
-    flex-direction: column;
-    align-items: center;
     box-shadow: 0 0 10px #ccc;
-    justify-content: center;
-    display: flex;
 }
 
 .TopBarContent {
@@ -51,3 +47,4 @@
     width: 5vh;
     height: inherit;
 }
+

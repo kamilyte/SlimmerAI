@@ -1,0 +1,26 @@
+.SearchBar {
+    position: absolute;
+    margin-top: 0.55vw;
+    margin-left: 0.5vw;
+    background-color: aqua;
+}
+
+.SearchIcon {
+    
+}
+
+.Location {
+    position: absolute;
+    left: 18vw;
+    margin-top: 9vw;
+    height: 1.75vw;
+}
+
+.Location h2 {
+    position: relative;
+    font-size: 1vw;
+    font-weight: 500;
+    color: #bdbdbd;
+    left: 1.5vw;
+    top: 0.1vw;
+}

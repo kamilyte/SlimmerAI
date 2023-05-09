@@ -1,6 +1,7 @@
 import React, {Component} from "react"
 import '../styles/topMenuBar.css';
 import dotDropDown from "../resources/dotDropDown.svg";
+import SearchBar from "../components/searchBar.js";
 
 class TopMenuBar extends Component {
     state = {clicked: false};
@@ -14,6 +15,7 @@ class TopMenuBar extends Component {
         return (
             <div className="TopMenuBarBox">
                 <div className="TopMenuBar">
+                    <SearchBar />
                     <div className="TopMenuBarAlwaysEnabled">
                         this is the content section
                     </div>
