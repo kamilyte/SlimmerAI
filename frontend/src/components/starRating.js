@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 
 const StarRating = () => {
     const [value, setValue] = useState(0);
+    var rate = 0; // set default as current lead rating, but waiting for endpoints for hook
 
     return (
         <Rating
@@ -15,9 +16,9 @@ const StarRating = () => {
           max={3}
           value={value}
           onChange={(event, newValue) => {
-            console.log(newValue)
+            rate = newValue
+            console.log(rate);
             setValue(newValue);
-            console.log(value);
           }}
         />
     );
