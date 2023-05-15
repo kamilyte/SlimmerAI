@@ -1,11 +1,7 @@
 import React, {useEffect, useState, useRef} from "react"
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from "@mui/material"
 import LinkIcon from '@mui/icons-material/Link';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
-import StarIcon from '@mui/icons-material/Star';
-import StarButton from "./starButton";
 import '../styles/table.css'
-import Popup from "./popup";
 import Profile from "./profile";
 import '../styles/popup.css'
 import StarRating from "./starRating";
@@ -17,6 +13,8 @@ function createData(profile, name, ranking, industry, linkedin, leadList) {
 }
 
 const leads = [
+    createData('Profile', 'Jane', '3 stars', 'Retail', "https://www.google.com/", 'E-commerce'),
+    createData('Profile', 'Jane', '3 stars', 'Retail', "https://www.google.com/", 'E-commerce'),
     createData('Profile', 'Jane', '3 stars', 'Retail', "https://www.google.com/", 'E-commerce')
 ]
 
@@ -50,11 +48,7 @@ const Leads = () => {
                     {leads.map((lead) => (
                         <TableRow key={lead.profile} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                             <TableCell component="th" scope="row">
-                                <button onClick={handleProfileClick} className="Profile" onMouseEnter={handleProfileEnter}>
-                                    <h2>
-                                        {((lead.name)[0]).concat('K')}
-                                    </h2>
-                                </button>
+                                <Profile initials={((lead.name)[0]).concat('K')} />
                             </TableCell>
                             <TableCell>{lead.name}</TableCell>
                             <TableCell>
@@ -69,10 +63,6 @@ const Leads = () => {
                                 </a>
                             </TableCell>
                             <TableCell>{lead.leadList}</TableCell>
-                            {
-                                isPopupOpen && (
-                                    <Popup/>)
-                            }
                         </TableRow>
                         
                     ))}

@@ -5,7 +5,7 @@ import '../styles/table.css';
 import StarButton from "./starButton";
 import LinkIcon from '@mui/icons-material/Link';
 import '../styles/table.css'
-import Popup from "./popup";
+import Profile from "./profile";
 
 function LeadTable() {
     const [leadList, setLeadList] = useState([]);
@@ -52,11 +52,7 @@ function LeadTable() {
                                         key={row.id}
                                         sx={{'&:last-child td, &:last-child th': { border: 0 }}}>
                                         <TableCell>
-                                        <button onClick={handleProfileClick} className="Profile" onMouseEnter={handleProfileEnter}>
-                                            <h2>
-                                                {((row.firstname)[0]).concat(row.lastname)}
-                                            </h2>
-                                        </button>
+                                            <Profile initials={((row.firstname)[0]).concat((row.lastname)[0])}/>
                                         </TableCell>
                                             <TableCell>{row.firstname}</TableCell>
                                             <TableCell>{row.lastname}</TableCell>
@@ -70,9 +66,6 @@ function LeadTable() {
                                                 </a>
                                             </TableCell>
                                             <TableCell>{row.company}</TableCell>
-                                            {
-                                                isPopupOpen && (<Popup/>)
-                                            }
                                         </TableRow>
                                     ))
                                 }

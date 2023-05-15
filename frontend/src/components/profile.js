@@ -12,6 +12,10 @@ const Profile = (props) => {
         setIsPopupOpen(!isPopupOpen)
     }
 
+    const handleProfileEnter = () => {
+        setIsPopupOpen(false)
+    }
+
     useEffect(() => {
 
         let handler = (e) => {
@@ -26,17 +30,17 @@ const Profile = (props) => {
 
     return (
         <div>
-        <button ref={buttonRef} onClick={handleProfileClick} className="Profile" id="popup">
+        <button onClick={handleProfileClick} className="Profile" onMouseEnter={handleProfileEnter}>
             <h2>
                 {props.initials}
             </h2>
-         </button>
+        </button>
         {
-            isPopupOpen && (<Popup/>)
+            isPopupOpen && (<Popup />)
         }
         </div>
     )
-    
+
 }
 
 export default Profile
