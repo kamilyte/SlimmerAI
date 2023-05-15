@@ -28,7 +28,7 @@ const SearchBar = () => {
         <div className="SearchBar">
             <form className="SearchForm">
                 <TextField id="search-bar" className="text" onInput={(e) => {setSearchQuery(e.target.value)}}  variant="outlined" placeholder ="Search..." size="small" 
-                inputProps={{ style: { height:"14px", width: "20vw"}, }}/>
+                inputProps={{ style: { height:"0.9vw", width: "35vw", fontSize: "1vw"}, }}/>
                 <IconButton type="submit" aria-label="search" size="small">
                     <SearchIcon  fontSize="inherit"/>
                 </IconButton>

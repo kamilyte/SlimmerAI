@@ -16,9 +16,6 @@ class TopMenuBar extends Component {
             <div className="TopMenuBarBox">
                 <div className="TopMenuBar">
                     <SearchBar />
-                    <div className="TopMenuBarAlwaysEnabled">
-                        this is the content section
-                    </div>
                     <div className={this.state.clicked ? "TopBarExpandedContent" : "TopBarDefaultContent" }>
                         content
                     </div>

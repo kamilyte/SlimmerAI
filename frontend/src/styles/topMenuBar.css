@@ -11,6 +11,8 @@
     background: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 0 10px #ccc;
+    height: 3.2vw;
+    min-height: 27px;
 }
 
 .TopBarContent {
