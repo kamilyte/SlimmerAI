@@ -1,12 +1,10 @@
 import React, {useEffect, useState, useRef} from "react"
-import { Component } from "react";
 import '../styles/table.css'
 import Popup from "./popup";
 
 const Profile = (props) => {
 
     const [isPopupOpen, setIsPopupOpen] = useState(false)
-    const buttonRef = useRef()
 
     const handleProfileClick = () => {
         setIsPopupOpen(!isPopupOpen)

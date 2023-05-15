@@ -1,11 +1,10 @@
 .SearchBar {
     position: absolute;
-    margin-top: 0.55vw;
-    margin-left: 0.5vw;
 }
 
-.SearchIcon {
-    
+.SearchForm {
+    margin-top: 0.55vw;
+    margin-left: 0.5vw;
 }
 
 .Location {

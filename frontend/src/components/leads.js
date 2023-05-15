@@ -20,16 +20,6 @@ const leads = [
 
 const Leads = () => {
     const [isFilled, setIsFilled] = useState(false)
-    const [isPopupOpen, setIsPopupOpen] = useState(false)
-
-    const handleProfileClick = () => {
-        setIsPopupOpen(!isPopupOpen)
-
-    }
-
-    const handleProfileEnter = () => {
-        setIsPopupOpen(false)
-    }
 
     return (
         <TableContainer component={Paper}>

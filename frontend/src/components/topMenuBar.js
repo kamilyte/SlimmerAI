@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import '../styles/topMenuBar.css';
 import dotDropDown from "../resources/dotDropDown.svg";
-import SearchBar from "../components/searchBar.js";
+import SearchBar from "./searchBarComponent";
 
 class TopMenuBar extends Component {
     state = {clicked: false};
