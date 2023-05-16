@@ -2,6 +2,7 @@ import React, {Component} from "react"
 import '../styles/topMenuBar.css';
 import dotDropDown from "../resources/dotDropDown.svg";
 import SearchBar from "./searchBarComponent";
+import Filter from "./filter";
 
 class TopMenuBar extends Component {
     state = {clicked: false};
@@ -14,11 +15,9 @@ class TopMenuBar extends Component {
     render() {
         return (
             <div className="TopMenuBarBox">
-                <div className="TopMenuBar">
+                <div className={this.state.clicked ? "TopMenuBarExpandedContent" : "TopMenuBar"}>
                     <SearchBar />
-                    <div className={this.state.clicked ? "TopBarExpandedContent" : "TopBarDefaultContent" }>
-                        content
-                    </div>
+                    <Filter />
                     <span className="TopBarDropDownSelection place-content-center">
                         <button type="button" onClick={this.handleClick} className="TopBarDropDownButton place-content-center">
                             <img className="DropDownIcon" src={dotDropDown} alt="3 Dot Dropdown Icon" />

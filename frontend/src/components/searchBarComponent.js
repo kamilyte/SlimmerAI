@@ -21,8 +21,6 @@ const SearchBar = () => {
 
     const [searchQuery, setSearchQuery] = useState("")
     const dataFiltered = filterData(searchQuery, data) //use react hook in place 
-    
-
 
     return (
         <div className="SearchBar">

@@ -1,6 +1,8 @@
 import React, {useEffect, useState, useRef} from "react"
 import '../styles/table.css'
 import Popup from "./popup";
+import { Avatar } from "@mui/material";
+import { deepPurple } from '@mui/material/colors';
 
 const Profile = (props) => {
 
@@ -28,11 +30,9 @@ const Profile = (props) => {
 
     return (
         <div>
-        <button onClick={handleProfileClick} className="Profile" onMouseEnter={handleProfileEnter}>
-            <h2>
-                {props.initials}
-            </h2>
-        </button>
+        <Avatar sx={{ bgcolor: deepPurple[500] }} onClick={handleProfileClick} onMouseEnter={handleProfileEnter}>
+            {props.initials}
+        </Avatar>
         {
             isPopupOpen && (<Popup />)
         }
