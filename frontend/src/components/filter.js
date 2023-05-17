@@ -2,11 +2,8 @@ import React, {Component} from "react"
 import Chip from "@mui/material/Chip";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
-import { Box } from "@mui/material";
-import { styled, alpha } from '@mui/material/styles';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import '../styles/filter.css'
+import Stack from '@mui/material/Stack';
 
 //create filter box style
 //integrate with top menu bar functionality
@@ -23,14 +20,14 @@ import '../styles/filter.css'
 
 const names = [
     "Some filter",
-    "Some filter",
-    "Some filter",
-    "Some filter",
-    "Some filter",
-    "Some filter",
-    "Some filter",
-    "Some filter",
-    "Some filter",
+    "Some filte",
+    "Some filtr",
+    "Some filer",
+    "Some fiter",
+    "Some flter",
+    "Some ilter",
+    "Somefilter",
+    "Som filter",
 ];
 
 
@@ -47,6 +44,16 @@ class Filter extends Component {
         return this.state.filtersChosen
     }
 
+    addFilter = (filter) => {
+        this.setState({filtersChosen: [...this.state.filtersChosen, {filter}]})
+        console.log(this.state.filtersChosen)
+    }
+
+    removeFilter = (filter) => {
+        this.setState({filtersChosen: this.state.filtersChosen.filter(arr => arr !== filter)})
+        console.log(this.state.filtersChosen)
+    }
+
     handleDropDown = () => {
         this.setState({filterOpen: !this.state.filterOpen})
       };
@@ -58,12 +65,16 @@ class Filter extends Component {
                  variant="outlined" label="Filter" onDelete={this.handleDropDown} deleteIcon={this.state.filterOpen ? <ArrowDropUpIcon/> : <ArrowDropDownIcon/>} sx={{borderRadius: 1}}
                 />
                 {this.state.filterOpen && (
-                    <div className="DropDown">
+                    <div className="DropDown" >
                         {names.map((name) => (
-                        <MenuItem key={name} value={name} style={{ fontSize: '0.9vw' }}>
-                            {name}
-                        </MenuItem>
+                        <Stack spacing={1}>
+                        <button key={name} value={name} className="item"> <h2>{name}</h2> </button>
+                      </Stack>
                         ))}
+
+                    <Stack spacing={1}> 
+                        <button className="option-item"> <h2>Clear Filters</h2></button>
+                    </Stack>
                     </div>
                 )}
                 

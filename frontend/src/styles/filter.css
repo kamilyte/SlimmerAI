@@ -14,3 +14,43 @@
     overflow: auto;
     position: absolute;
 }
+
+.item {
+    background-color: white;
+    height: 2.25vw;
+    width: inherit;
+}
+
+.item h2 {
+    font-size: 13px;
+    text-align: left;
+    margin-left: 1.1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(56, 56, 56);
+}
+
+.item-chosen {
+    background-color: aliceblue;
+    height: 2.25vw;
+}
+
+.item:hover {
+    background-color: aliceblue;
+}
+
+.item:active {
+    background-color: aliceblue;
+}
+
+.option-item {
+    background-color: black;
+    height: 2.3vw;
+    width: 100%;
+}
+
+.option-item h2 {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+}
