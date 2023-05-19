@@ -13,36 +13,36 @@ const filterTracker = [
 ]
 
 function TopMenuBar (){
+    const [state, setState] = useState(false)
     const [filterList, setFilterList] = useState([]);
     const [uniqueFilterList, setUniqueFilterList] = useState([]);
 
+    let handleClick = () => {
+        setState({ clicked: !state.clicked })
+    }
+
     useEffect(() => {
-    const fetchData = async () => {
-        await FetchFilterListRequest(setFilterList)
+    const fetchFilterData = async () => {
         await FetchUniqueFiltersRequest(setUniqueFilterList)
+        await FetchFilterListRequest(setFilterList)
+
     };
 
-    fetchData()
+    fetchFilterData()
     }, []);
 
 
     function TopMenuBar() {
-        const [state, setState] = useState(false)
+        console.log(uniqueFilterList)
         let styled = []
         let unstyled = []
         if (filterList != null) {
             styled = filterList.styled
             unstyled = filterList.unstyled
-            console.log(styled)
-            console.log(unstyled)
-        }
-
-        let handleClick = () => {
-            setState({ clicked: !state.clicked })
-            console.log("Clicked Now")
         }
 
         if (styled != null) {
+                console.log(uniqueFilterList)
                 return <div className="TopMenuBarBox">
                     <div className={state.clicked ? "TopMenuBarExpandedContent" : "TopMenuBar"}>
                         <Grid container spacing={3}>

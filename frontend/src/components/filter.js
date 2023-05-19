@@ -22,18 +22,14 @@ import Stack from '@mui/material/Stack';
 //theres a main space for filter -> whichever one is chosen is added to a list of array filters
 //
 
-let filterHeader = ""
-
-
 const handleDropDown = () => {
     this.setState({filterOpen: !this.state.filterOpen})
 };
 
 const filter = ({filterHeaderStyled, filterHeaderUnstyled, filterTracker, index, uniqueFilterList}) => {
-    console.log(filterHeader)
-    console.log(filterHeaderUnstyled)
-    console.log(filterTracker)
-    console.log(index)
+    console.log(uniqueFilterList)
+
+    let filterOptions = (eval("uniqueFilterList." + filterHeaderUnstyled))
 
     return <div>
         <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
@@ -42,11 +38,14 @@ const filter = ({filterHeaderStyled, filterHeaderUnstyled, filterTracker, index,
                         value = {[]}
                         labelId="demo-simple-select-standard-label"
                         id="demo-simple-select-standard"
-                        label={filterHeader}
+                        label={filterHeaderStyled}
                     >
                         <MenuItem value="">
                             <em>None</em>
                         </MenuItem>
+                        {filterOptions.map((value, index) => (
+                            <MenuItem value={value}> {value} </MenuItem>
+                        ))}
                     </Select>
         </FormControl>
         </div>

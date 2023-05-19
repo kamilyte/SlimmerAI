@@ -9,7 +9,7 @@ async function FetchFilterListRequest(setFilterList){
     }
 
     myHeaders.append("accept", "application/json");
-    await fetch("http://127.0.0.1:5000/v1/leads/filter-values", requestOptions)
+    await fetch("http://127.0.0.1:5000/v1/leads/filter", requestOptions)
         .then(response => response.json())
         .then(body => {
             const data = body.response
