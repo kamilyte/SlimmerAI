@@ -3,6 +3,10 @@ import Chip from "@mui/material/Chip";
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import '../styles/filter.css'
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 
 //create filter box style
@@ -29,7 +33,6 @@ const names = [
     "Somefilter",
     "Som filter",
 ];
-
 
 class Filter extends Component {
     constructor(props) {
@@ -61,7 +64,8 @@ class Filter extends Component {
     render () {
         return (
             <div className="Chip">
-                <Chip variant="outlined" label="Filter" onDelete={this.handleDropDown} deleteIcon={this.state.filterOpen ? <ArrowDropUpIcon/> : <ArrowDropDownIcon/>} sx={{borderRadius: 1, height: "2vw", width: "10vw", marginTop: "0.6vw"}}
+                <Chip 
+                 variant="outlined" label="Filter" onDelete={this.handleDropDown} deleteIcon={this.state.filterOpen ? <ArrowDropUpIcon/> : <ArrowDropDownIcon/>} sx={{borderRadius: 1}}
                 />
                 {this.state.filterOpen && (
                     <div className="DropDown" >
@@ -76,7 +80,6 @@ class Filter extends Component {
                     </Stack>
                     </div>
                 )}
-                
                 
             </div>
         )

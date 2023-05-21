@@ -1,9 +1,10 @@
-import React, {Component} from "react"
+import React, {Component, useEffect, useState} from "react"
 import '../styles/topMenuBar.css';
 import dotDropDown from "../resources/dotDropDown.svg";
 import SearchBar from "./searchBarComponent";
 import Filter from "./filter";
 import { Grid } from "@mui/material";
+
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
@@ -20,6 +21,7 @@ class TopMenuBar extends Component {
         this.setState({ clicked: !this.state.clicked })
         console.log("Clicked Now")
     }
+
 
     render() {
         return (
@@ -81,6 +83,7 @@ class TopMenuBar extends Component {
                     </Box>
                 </Box>
         )
+
     }
 }
 

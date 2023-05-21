@@ -52,14 +52,14 @@ function LeadTable() {
                                         key={row.id}
                                         sx={{'&:last-child td, &:last-child th': { border: 0 }}}>
                                         <TableCell>
-                                            <Profile initials={((row.firstname)[0]).concat((row.lastname)[0])}/>
+                                            <Profile initials={((row.first_name)[0]).concat((row.last_name)[0])}/>
                                         </TableCell>
-                                            <TableCell>{row.firstname}</TableCell>
-                                            <TableCell>{row.lastname}</TableCell>
+                                            <TableCell>{row.first_name}</TableCell>
+                                            <TableCell>{row.last_name}</TableCell>
                                             <TableCell> <StarButton /> </TableCell>
-                                            <TableCell>{row.position}</TableCell>
+                                            <TableCell>{row.current_position}</TableCell>
                                             <TableCell>
-                                                <a href={row.linkedin} target="_blank" rel="noreferrer">
+                                                <a href={row.linked_in} target="_blank" rel="noreferrer">
                                                     <IconButton>
                                                         <LinkIcon />
                                                     </IconButton>
