@@ -11,8 +11,20 @@
     background: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 0 10px #ccc;
-    height: 3.2vw;
+    height: 4.25vw;
     min-height: 27px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.TopMenuBarExpandedContent{
+    width: calc(100%);
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    height: 7vw;
+    position: relative;
+    transition: 0.5s;
 }
 
 .TopBarContent {
@@ -32,14 +44,6 @@
     background: inherit;
 }
 
-.TopMenuBarExpandedContent{
-    width: calc(100%);
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
-    box-shadow: 0 0 10px #ccc;
-    height: 15vw;
-}
-
 .TopBarDropDownSelection {
     height: 3vh;
     width: inherit;
@@ -52,9 +56,29 @@
     display: flex;
     height: 2vh;
 }
+
 .DropDownIcon {
     align-content: center;
     width: 5vh;
     height: inherit;
 }
 
+.TopMenuBar img {
+    position: relative;
+    background-color: #bdbdbd;
+    height: 0.05vw;
+    width: 98%;
+    left: 1%;
+}
+
+.TopMenuBarExpandedContent img {
+    position: relative;
+    background-color: #bdbdbd;
+    height: 0.05vw;
+    width: 98%;
+    left: 1%;
+}
+.DownIcon {
+    position: absolute;
+    margin-top: 0vw;
+}
