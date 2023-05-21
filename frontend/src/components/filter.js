@@ -65,7 +65,7 @@ class Filter extends Component {
         return (
             <div className="Chip">
                 <Chip 
-                 variant="outlined" label="Filter" onDelete={this.handleDropDown} deleteIcon={this.state.filterOpen ? <ArrowDropUpIcon/> : <ArrowDropDownIcon/>} sx={{borderRadius: 1}}
+                 variant="outlined" label="Filter" onDelete={this.handleDropDown} deleteIcon={this.state.filterOpen ? <ArrowDropUpIcon/> : <ArrowDropDownIcon/>} sx={{borderRadius: 1, height: "2vw", width: "10vw", marginTop: "0.6vw"}}
                 />
                 {this.state.filterOpen && (
                     <div className="DropDown" >
