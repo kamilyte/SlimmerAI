@@ -7,6 +7,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import { IconButton } from "@mui/material";
 import '../styles/message.css'
 import Message from "./message";
+import MessagePanel from "./messagePanel";
 
 
 class SideMenuBar extends Component {
@@ -88,7 +89,7 @@ class SideMenuBar extends Component {
                     content 1
                 </div>
                 <div className={this.state.clicked.messagesIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
-                    {sidebarContent}
+                    <MessagePanel/>
                 </div>
                 <div className={this.state.clicked.savedSearchIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
                     content 3
