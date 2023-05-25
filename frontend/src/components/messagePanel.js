@@ -1,5 +1,6 @@
 import React from "react"
 import Message from "./message"
+import '../styles/messagePanel.css';
 
 function MessagePanel() {
     //get hook for retrieving all messages
@@ -18,6 +19,8 @@ function MessagePanel() {
     //add id into the <Message> as a prop 
     return (
         <div>
+            <div className="Header">
+            </div>
             {textList?.length ? textList.map(txt => <Message text={txt} />) : null}
         </div>
     )
