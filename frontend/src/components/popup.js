@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React, {useState} from "react"
 import '../styles/popup.css'
 import CloseIcon from '@mui/icons-material/Close';
 import { IconButton } from "@mui/material";
@@ -6,26 +6,23 @@ import EditIcon from '@mui/icons-material/Edit';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { grey } from "@mui/material/colors";
 
-class Popup extends Component {
-    state = {
-        popup: true
-    }
+const Popup = () => {
+    const [popup, setPopup] = useState(true)
 
-    handleCloseClick = () => {
-        this.setState({popup: false})
+    const handleCloseClick = () => {
+        setPopup(false)
     }
     
-    handlePopupClick = e => {
+    const handlePopupClick = e => {
         e.preventDefault()
         if (e.target === e.currentTarget) {
-            this.setState({popup: false})
+            setPopup(false)
         }
     }
-
-    render() {
+    
         return (
-                this.state.popup && ( 
-            <div className="Popup" onClick={this.handlePopupClick} id="popup-background">
+            popup && ( 
+            <div className="Popup" onClick={handlePopupClick} id="popup-background">
                 <div className="PopupCard">
                     <img className="Popup-profile">
                     </img>
@@ -51,7 +48,7 @@ class Popup extends Component {
                         <img>
                         </img>
                     </div>
-                    <IconButton className="Close" size="small" onClick={this.handleCloseClick}>
+                    <IconButton className="Close" size="small" onClick={handleCloseClick}>
                         <CloseIcon fontSize="inherit"/>
                     </IconButton>
                     <IconButton className="Edit" size="small">
@@ -60,7 +57,7 @@ class Popup extends Component {
                 </div> 
             </div>)
         )
-    }
+    
 }
 
 export default Popup

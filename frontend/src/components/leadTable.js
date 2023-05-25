@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react"
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton } from "@mui/material"
 import FetchLeadsRequest from "../functions/fetchLeadsRequest";
 import '../styles/table.css';
-import StarButton from "./starButton";
+import StarRating from "./starRating";
 import LinkIcon from '@mui/icons-material/Link';
 import '../styles/table.css'
 import Profile from "./profile";
@@ -56,7 +56,7 @@ function LeadTable() {
                                         </TableCell>
                                             <TableCell>{row.first_name}</TableCell>
                                             <TableCell>{row.last_name}</TableCell>
-                                            <TableCell> <StarButton /> </TableCell>
+                                            <TableCell> <StarRating /> </TableCell>
                                             <TableCell>{row.current_position}</TableCell>
                                             <TableCell>
                                                 <a href={row.linked_in} target="_blank" rel="noreferrer">

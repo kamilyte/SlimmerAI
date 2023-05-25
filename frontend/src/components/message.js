@@ -1,14 +1,14 @@
-import React, {Component} from "react"
+import React from "react"
 import '../styles/message.css';
 
-class Message extends Component {
-    render() {
-        return (
-            <button className="MessageButton" >
-                {this.props.text}
-            </button>
+const Message = (props) => {
+    
+    return (
+        <button className="MessageButton" >
+            {props.text}
+        </button>
         )
-    }
+    
 }
 
 export default Message
