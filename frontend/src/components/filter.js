@@ -9,56 +9,69 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 
-const handleDropDown = () => {
-    this.setState({filterOpen: !this.state.filterOpen})
-};
+const names = [
+    "Some filter",
+    "Some filte",
+    "Some filtr",
+    "Some filer",
+    "Some fiter",
+    "Some flter",
+    "Some ilter",
+    "Somefilter",
+    "Som filter",
+];
 
-const filter = ({filterHeaderStyled, filterHeaderUnstyled, filterTracker, index, uniqueFilterList}) => {
-    console.log(uniqueFilterList)
+class Filter extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            filtersChosen: [],
+            filterOpen: false
+        }
+    }
 
-    let filterOptions = (eval("uniqueFilterList." + filterHeaderUnstyled))
+    returnFilters = () => {
+        return this.state.filtersChosen
+    }
 
-    return <div>
-        <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
-                <InputLabel id="demo-simple-select-standard-label">{filterHeaderStyled}</InputLabel>
-                    <Select
-                        value = {[]}
-                        labelId="demo-simple-select-standard-label"
-                        id="demo-simple-select-standard"
-                        label={filterHeaderStyled}
-                    >
-                        <MenuItem value="">
-                            <em>None</em>
-                        </MenuItem>
-                        {filterOptions.map((value, index) => (
-                            <MenuItem value={value}> {value} </MenuItem>
+    addFilter = (filter) => {
+        this.setState({filtersChosen: [...this.state.filtersChosen, {filter}]})
+        console.log(this.state.filtersChosen)
+    }
+
+    removeFilter = (filter) => {
+        this.setState({filtersChosen: this.state.filtersChosen.filter(arr => arr !== filter)})
+        console.log(this.state.filtersChosen)
+    }
+
+    handleDropDown = () => {
+        this.setState({filterOpen: !this.state.filterOpen})
+    };
+
+    render () {
+        return (
+            <div className="Chip">
+                <Chip 
+                 variant="outlined" label="Filter" onDelete={this.handleDropDown} deleteIcon={this.state.filterOpen ? <ArrowDropUpIcon/> : <ArrowDropDownIcon/>} sx={{borderRadius: 1, height: "2vw", width: "10vw", marginTop: "0.6vw"}}
+                />
+                {this.state.filterOpen && (
+                    <div className="DropDown" >
+                        {names.map((name) => (
+                        <Stack spacing={1}>
+                        <button key={name} value={name} className="item"> <h2>{name}</h2> </button>
+                      </Stack>
                         ))}
-                    </Select>
-        </FormControl>
-        </div>
-}
-export default filter
 
-/**
- *
- *                         {filterHeader.map((value, index) => (
- *                             <MenuItem value={value}> {value} </MenuItem>
- *                         ))}
- *  <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
- *                     {filterHeaders.map((filterHeader) => (
- *                         <InputLabel id="demo-simple-select-standard-label">{filterHeader}</InputLabel>,
- *                         <Select
- *                             value = {[]}
- *                             labelId="demo-simple-select-standard-label"
- *                             id="demo-simple-select-standard"
- *                             onChange={this.handleDropDown}
- *                             label={filterHeader}
- *                         >
- *                             <MenuItem value="">
- *                                 <em>None</em>
- *                             </MenuItem>
- *
- *                         </Select>
- *                     ))}
- *                 </FormControl>
- */
+                    <Stack spacing={1}> 
+                        <button className="option-item"> <h2>Clear Filters</h2></button>
+                    </Stack>
+                    </div>
+                )}
+                
+            </div>
+        )
+        
+    }
+}
+
+export default Filter

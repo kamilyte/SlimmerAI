@@ -1,14 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import '../styles/message.css';
 
-const Message = (props) => {
-    
+
+function Message({id, text}) {
+    const [messageText, setMessageText] = useState(text)
+
+
     return (
         <button className="MessageButton" >
-            {props.text}
+            {text}
         </button>
-        )
-    
+    )
 }
 
 export default Message
