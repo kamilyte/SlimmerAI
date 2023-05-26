@@ -6,9 +6,15 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 
-const StarRating = () => {
+const StarRating = (id, rating) => {
     const [value, setValue] = useState(0);
-    var rate = 0; // set default as current lead rating, but waiting for endpoints for hook
+    var rate = 0; // set default as current lead rating
+
+    const onRatingChange = (newValue) => {
+      rate = newValue //use rate instead of value because value doesnt update
+      setValue(rate)
+      //add hook to update rating
+    }
 
     return (
         <Rating
@@ -16,9 +22,7 @@ const StarRating = () => {
           max={3}
           value={value}
           onChange={(event, newValue) => {
-            rate = newValue
-            console.log(rate);
-            setValue(newValue);
+            onRatingChange(newValue)
           }}
         />
     );

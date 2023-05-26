@@ -56,7 +56,7 @@ function LeadTable() {
                                         </TableCell>
                                             <TableCell>{row.first_name}</TableCell>
                                             <TableCell>{row.last_name}</TableCell>
-                                            <TableCell> <StarRating /> </TableCell>
+                                            <TableCell> <StarRating id={row.id}/> </TableCell>
                                             <TableCell>{row.current_position}</TableCell>
                                             <TableCell>
                                                 <a href={row.linked_in} target="_blank" rel="noreferrer">
