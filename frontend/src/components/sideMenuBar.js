@@ -8,6 +8,7 @@ import { IconButton } from "@mui/material";
 import '../styles/message.css'
 import Message from "./message";
 import MessagePanel from "./messagePanel";
+import ImportPanel from "./importPanel";
 
 
 class SideMenuBar extends Component {
@@ -86,7 +87,7 @@ class SideMenuBar extends Component {
                     </IconButton>
                 </div>
                 <div className={this.state.clicked.importIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
-                    content 1
+                    <ImportPanel />
                 </div>
                 <div className={this.state.clicked.messagesIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
                     <MessagePanel/>

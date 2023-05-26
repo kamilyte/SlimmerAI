@@ -1,0 +1,41 @@
+.container {
+    position: relative;
+}
+
+.Title {
+    width: inherit;
+    height: 9vw; 
+    position: relative;
+}
+
+.Title h2 {
+    font-size: 2vw;
+    color: black;
+    position: absolute;
+    left: 7vw;
+}
+
+.Title img {
+    position: relative;
+    float: left;
+    top: 3vw;
+    left: 1.25vw;
+    background-color: #a2a4a6;
+    height: 0.1vw;
+    width: 22.5vw;
+}
+
+.ImportButton {
+    height: 4vw;
+    width: 23vw;
+    bottom: 0;
+    position: absolute;
+    left: 1vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    font-size: 1vw;
+}
+
+.ImportButton:hover {
+    background-color: rgb(242, 244, 245);
+}
