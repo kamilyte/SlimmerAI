@@ -9,6 +9,7 @@ import '../styles/message.css'
 import Message from "./message";
 import MessagePanel from "./messagePanel";
 import ImportPanel from "./importPanel";
+import SavedSearchPanel from "./savedSearchPanel";
 
 
 class SideMenuBar extends Component {
@@ -93,7 +94,7 @@ class SideMenuBar extends Component {
                     <MessagePanel/>
                 </div>
                 <div className={this.state.clicked.savedSearchIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
-                    content 3
+                    <SavedSearchPanel />
                 </div>
                 <div className={this.state.clicked.shareIcon ? "SideBarIconExpandedContent" : "NoExpansion" }>
                     content 4
