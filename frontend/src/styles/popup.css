@@ -97,6 +97,7 @@
     font-style: italic;
     border-radius: 3px;
     color: gray;
+    text-align: center;
 }
 
 .Work {
@@ -126,8 +127,13 @@
     width: 12.5vw;
 }
 
-.Work-content {
-
+.WorkContent {
+    background-color: aqua;
+    height: 20vw;
+    width: 26vw;
+    position: absolute;
+    top: 20.5vw;
+    left: 2vw;
 }
 
 

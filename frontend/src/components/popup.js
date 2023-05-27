@@ -48,6 +48,9 @@ const Popup = () => {
                         <img>
                         </img>
                     </div>
+                    <div className="WorkContent">
+
+                    </div>
                     <IconButton className="Close" size="small" onClick={handleCloseClick}>
                         <CloseIcon fontSize="inherit"/>
                     </IconButton>

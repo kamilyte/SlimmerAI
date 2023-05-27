@@ -32,11 +32,19 @@ function Message({id, text}) {
         setMessageText(event.target.value)
     }
 
+    const onCopyClick = () => {
+        if (isWriteDisabled) {
+            navigator.clipboard.writeText(messageText)
+        }
+    }
+
     return (
         <div className="Message">
-            <textarea className="MessageButton" value={messageText} onChange={handleMessageChange} disabled={isWriteDisabled}>
-                {text}
-            </textarea>
+            <div onClick={onCopyClick}>
+                <textarea className="MessageButton" value={messageText} onChange={handleMessageChange} disabled={isWriteDisabled}>
+                    {messageText}
+                </textarea>
+            </div>
             <div className="Icon">
                 <IconButton onClick ={onCheckClick} disabled={isCheckDisabled} color="success" size="small">
                     <CheckCircleOutlineIcon fontSize="inherit"/>
