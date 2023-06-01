@@ -7,9 +7,13 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { grey } from "@mui/material/colors";
 import Rating from '@mui/material/Rating';
 import DoneIcon from '@mui/icons-material/Done';
+import PushPinIcon from '@mui/icons-material/PushPin';
+import TextField from '@mui/material/TextField';
+import Note from "./note";
 
 const Popup = () => {
     const [popup, setPopup] = useState(true)
+    const [isWriteDisabled, setIsWriteDisabled] = useState(true)
 
     const openToWork = true;
 
@@ -22,6 +26,17 @@ const Popup = () => {
         if (e.target === e.currentTarget) {
             setPopup(false)
         }
+    }
+
+    const onKeyDownHandler = e => {
+        if (e.keyCode === 13) {
+            setIsWriteDisabled(true)
+            //add hook function to add notes
+        }
+    }
+
+    const handleNotesClick = () => {
+        setIsWriteDisabled(false)
     }
     
         return (
@@ -72,8 +87,20 @@ const Popup = () => {
                         <img>
                         </img>
                     </div>
-                    <div className="History">
-
+                    <div className="Notes">
+                        <PushPinIcon className="NotesIcon" fontSize="small"/>
+                        <h2>Notes</h2>
+                        <img></img>
+                    </div>
+                    <div onClick={handleNotesClick}>
+                        <textarea className="AddNotes" onKeyDown={onKeyDownHandler} disabled={isWriteDisabled} placeholder="Add a note..."></textarea>
+                    </div>
+                    <div className="NotesContent">
+                        <Note />
+                        <Note />
+                        <Note />
+                        <Note />
+                        <Note />
                     </div>
                     <dl className="WorkContent">
                         <dt className="WorkListContainer">

@@ -314,28 +314,63 @@
     color: black;
 }
 
-.History {
+.Notes {
     height: 1.5vw;
-    width: 17vw;
+    width: 27vw;
     position: absolute;
-    top: 18.5vw;
-    left: 28vw;
+    top: 17.9vw;
+    left: 29vw;
 }
 
-.History h2 {
-    position: absolute;
-    font-size: 0.9vw;
-    font-weight: 700;
-    color: #bdbdbd;
+.NotesIcon {
     float: left;
+    transform: rotate(310deg);
+    color: black;
+    margin-top: 0.5%;
 }
 
-.History img {
-    position: relative;
+.Notes h2 {
+    font-size: 1vw;
+    font-weight: 550;
+    color: #020202;
     float: left;
-    top: 0.9vw;
-    left: 3.25vw;
+    margin-top: 0.1vw;
+}
+
+.Notes img {
+    float: left;
     background-color: #bdbdbd;
-    height: 0.1vw;
+    height: 0.13vw;
     width: 100vw;
+}
+
+.NotesContent {
+    height: 35vh;
+    width: 26vw;
+    position: relative;
+    top: 11vw;
+    left: 29vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.NotesContent::-webkit-scrollbar {
+    display: none;
+}
+
+.AddNotes {
+    position: relative;
+    background-color: rgb(237, 234, 234);
+    height: 2vw;
+    width: 27vw;
+    resize: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0.4vw;
+    overflow: hidden;
+    color: black;
+    font-size: 0.8vw;
+    outline: none;
+    left: 29vw;
+    top: 11vw;
 }
