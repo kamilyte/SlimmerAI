@@ -12,6 +12,7 @@ import TextField from '@mui/material/TextField';
 import Note from "./note";
 import StarRating from "./starRating";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import StatusList from "./statusList";
 
 const Popup = () => {
     const [popup, setPopup] = useState(true)
@@ -54,6 +55,8 @@ const Popup = () => {
             setIsCheckDisabled(true)
         }
     }
+
+    const name = "StatusChip"
     
         return (
             popup && ( 
@@ -93,10 +96,12 @@ const Popup = () => {
                     </div>
                     <div className="Status">
                         <h2>STATUS</h2>
-                        <div className="StatusChip">
-                            Connected
+                        <div className={name}>
+                            Meeting Scheduled
                         </div>
+                        <StatusList/>
                     </div>
+                    
                     <div className="LeadList">
                         Lead-List
                     </div>
