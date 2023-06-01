@@ -10,10 +10,14 @@ import DoneIcon from '@mui/icons-material/Done';
 import PushPinIcon from '@mui/icons-material/PushPin';
 import TextField from '@mui/material/TextField';
 import Note from "./note";
+import StarRating from "./starRating";
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 
 const Popup = () => {
     const [popup, setPopup] = useState(true)
     const [isWriteDisabled, setIsWriteDisabled] = useState(true)
+    const [isRatingDisabled, setIsRatingDisabled] = useState(true)
+    const [isCheckDisabled, setIsCheckDisabled] = useState(true)
 
     const openToWork = true;
 
@@ -38,6 +42,18 @@ const Popup = () => {
     const handleNotesClick = () => {
         setIsWriteDisabled(false)
     }
+
+    const handleEditClick = () => {
+        setIsRatingDisabled(false)
+        setIsCheckDisabled(false)
+    }
+
+    const handleCheckClick = () => {
+        if (!isCheckDisabled) {
+            setIsRatingDisabled(true)
+            setIsCheckDisabled(true)
+        }
+    }
     
         return (
             popup && ( 
@@ -46,11 +62,15 @@ const Popup = () => {
                     <IconButton className="ClosePopup" size="small" onClick={handleCloseClick}>
                         <CloseIcon fontSize="inherit"/>
                     </IconButton>
-                    <IconButton className="EditPopup" size="small">
+                    <IconButton className="EditPopup" size="small" onClick={handleEditClick}>
                         <EditIcon fontSize="inherit"/>
                     </IconButton>
-                    <img className="Popup-profile">
-                    </img>
+                    <IconButton className="EditPopup" onClick={handleCheckClick} color="success" size="small" disabled={isCheckDisabled}>
+                        <CheckCircleOutlineIcon fontSize="inherit"/>
+                    </IconButton>
+                    <div className="Popup-profile">
+                        <h2>SS</h2>
+                    </div>
                     <h2 className="Popup-name">
                         Name
                     </h2>
@@ -65,7 +85,7 @@ const Popup = () => {
                     </div>
                     <div className="Rating">
                         <h2>RANKING</h2>
-                        <Rating value={2} readOnly max={3}/>
+                        {isRatingDisabled ? <Rating value={2} readOnly max={3}/> : <StarRating/>}
                     </div>
                     <div className="OpenToWork">
                         <h2>OPEN TO WORK</h2>

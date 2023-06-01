@@ -52,6 +52,13 @@
     margin: 3vw;
 }
 
+.Popup-profile h2 {
+    position: relative;
+    top: 1.1vw;
+    font-size: 7.5vw;
+    left: 1.15vw;
+}
+
 .Popup-name {
     position: absolute;
     font-size: 3.5vw;
