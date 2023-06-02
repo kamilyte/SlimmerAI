@@ -23,6 +23,7 @@ const StatusList = ({value}) => {
     const onStatusClick = (index) => {
         setCurrentState(classNameList[index])
         setCurrentStateText(list[index])
+        //add hook function to update status with list[index]
     }
 
     return (
