@@ -1,9 +1,10 @@
 
 .MessageButton {
+    position: relative;
     z-index: 2;
     border: 1px solid #a2a4a6;
     border-radius: 20px;
-    width: 22.9vw;
+    width: 23vw;
     height: 10vw;
     cursor: pointer;
     font-size: 11px;
@@ -15,6 +16,8 @@
     padding-top: 0.5vh;
     padding-bottom: 1vh;
     resize: none;
+    top: -0.07vw;
+    left: -0.07vw;
 }
 
 .MessageButton:disabled {
