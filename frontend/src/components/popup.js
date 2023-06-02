@@ -94,13 +94,8 @@ const Popup = () => {
                         <h2>OPEN TO WORK</h2>
                         <DoneIcon color={openToWork ? "success" : "error"}/>
                     </div>
-                    <div className="Status">
-                        <h2>STATUS</h2>
-                        <div className={name}>
-                            Meeting Scheduled
-                        </div>
-                        <StatusList/>
-                    </div>
+                    <StatusList value={isCheckDisabled}/>
+
                     
                     <div className="LeadList">
                         Lead-List

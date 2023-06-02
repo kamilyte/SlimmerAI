@@ -22,6 +22,7 @@
     flex-direction: column;
     align-items: center; 
     background-color: white;
+    top: 3vw;
 }
 
 .Contacted {
@@ -37,6 +38,10 @@
     margin: 0.1vw;
 }
 
+.Contacted:hover {
+    background-color: rgb(245, 245, 141);
+}
+
 .Accepted {
     background-color: rgb(144, 255, 144);
     height: 1.6vw;
@@ -48,6 +53,10 @@
     color: black;
     padding-top: 0.3vw;
     margin: 0.1vw;
+}
+
+.Accepted:hover {
+    background-color: rgb(134, 236, 134);
 }
 
 .Reacted {
@@ -63,6 +72,10 @@
     margin: 0.1vw;
 }
 
+.Reacted:hover {
+    background-color: rgb(237, 186, 91);
+}
+
 .MeetingScheduled {
     background-color: rgb(255, 157, 157);
     height: 1.6vw;
@@ -76,6 +89,10 @@
     margin: 0.1vw;
 }
 
+.MeetingScheduled:hover {
+    background-color: rgb(232, 142, 142);
+}
+
 .Applied {
     background-color: rgb(116, 190, 255);
     height: 1.6vw;
@@ -87,4 +104,8 @@
     color: black;
     padding-top: 0.3vw;
     margin: 0.1vw;
+}
+
+.Applied:hover {
+    background-color: rgb(108, 177, 238);
 }

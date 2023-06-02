@@ -1,0 +1,40 @@
+.Status {
+    position: relative;
+    height: 3vw;
+    width: 10vw;
+    left: 28vw;
+    top: 5.3vw;
+}
+
+.Status h2{
+    color: rgb(211, 211, 211);
+    font-size: 0.75vw;
+    font-weight: 650;
+}
+
+.StatusChip {
+    height: 1.6vw;
+    width: 7vw;
+    background-color: rgb(116, 190, 255);
+    border-radius: 5px;
+    margin-top: 4px;
+    font-size: 0.7vw;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 0.3vw;
+    color: black;
+}
+
+.DropBox {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.StatusDrop {
+    position: relative;
+    height: 1.6vw;
+    width: 1.6vw;
+    left: 7vw;
+    bottom: 1.7vw;
+}

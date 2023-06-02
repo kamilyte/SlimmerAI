@@ -294,33 +294,6 @@
     font-weight: 650;
 }
 
-.Status {
-    position: relative;
-    height: 3vw;
-    width: 8.5vw;
-    left: 28vw;
-    top: 5.3vw;
-    background-color: aqua;
-}
-
-.Status h2{
-    color: rgb(211, 211, 211);
-    font-size: 0.75vw;
-    font-weight: 650;
-}
-
-.StatusChip {
-    height: 1.6vw;
-    width: 7vw;
-    background-color: rgb(116, 190, 255);
-    border-radius: 5px;
-    margin-top: 4px;
-    font-size: 0.7vw;
-    font-weight: 400;
-    text-align: center;
-    padding-top: 0.3vw;
-    color: black;
-}
 
 .Notes {
     height: 1.5vw;
