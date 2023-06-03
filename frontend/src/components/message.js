@@ -4,6 +4,7 @@ import { IconButton } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import MessageStatus from "./messageStatus";
 
 
 function Message({id, text}) {
@@ -55,6 +56,9 @@ function Message({id, text}) {
                 <IconButton onClick ={onDeleteClick} size="small">
                     <DeleteIcon fontSize="inherit"/>
                 </IconButton>
+            </div>
+            <div className="MessageContainer">
+            <MessageStatus />
             </div>
         </div>
     )

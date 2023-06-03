@@ -17,8 +17,6 @@ import StatusList from "./statusList";
 const Popup = () => {
     const [popup, setPopup] = useState(true)
     const [isWriteDisabled, setIsWriteDisabled] = useState(true)
-    const [isRatingDisabled, setIsRatingDisabled] = useState(true)
-    const [isCheckDisabled, setIsCheckDisabled] = useState(true)
 
     const openToWork = true;
 
@@ -44,18 +42,6 @@ const Popup = () => {
         setIsWriteDisabled(false)
     }
 
-    const handleEditClick = () => {
-        setIsRatingDisabled(false)
-        setIsCheckDisabled(false)
-    }
-
-    const handleCheckClick = () => {
-        if (!isCheckDisabled) {
-            setIsRatingDisabled(true)
-            setIsCheckDisabled(true)
-        }
-    }
-
     const name = "StatusChip"
     
         return (
@@ -64,12 +50,6 @@ const Popup = () => {
                 <div className="PopupCard">
                     <IconButton className="ClosePopup" size="small" onClick={handleCloseClick}>
                         <CloseIcon fontSize="inherit"/>
-                    </IconButton>
-                    <IconButton className="EditPopup" size="small" onClick={handleEditClick}>
-                        <EditIcon fontSize="inherit"/>
-                    </IconButton>
-                    <IconButton className="EditPopup" onClick={handleCheckClick} color="success" size="small" disabled={isCheckDisabled}>
-                        <CheckCircleOutlineIcon fontSize="inherit"/>
                     </IconButton>
                     <div className="Popup-profile">
                         <h2>SS</h2>
@@ -88,15 +68,13 @@ const Popup = () => {
                     </div>
                     <div className="Rating">
                         <h2>RANKING</h2>
-                        {isRatingDisabled ? <Rating value={2} readOnly max={3}/> : <StarRating/>}
+                        <StarRating />
                     </div>
                     <div className="OpenToWork">
                         <h2>OPEN TO WORK</h2>
                         <DoneIcon color={openToWork ? "success" : "error"}/>
                     </div>
-                    <StatusList value={isCheckDisabled}/>
-
-                    
+                    <StatusList/>
                     <div className="LeadList">
                         Lead-List
                     </div>
