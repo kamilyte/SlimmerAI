@@ -13,6 +13,7 @@ import Note from "./note";
 import StarRating from "./starRating";
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import StatusList from "./statusList";
+import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
 
 const Popup = () => {
     const [popup, setPopup] = useState(true)
@@ -42,6 +43,10 @@ const Popup = () => {
         setIsWriteDisabled(false)
     }
 
+    const handleDeleteClick = () => {
+        //hook function for deleting lead
+    }
+
     const name = "StatusChip"
     
         return (
@@ -50,6 +55,9 @@ const Popup = () => {
                 <div className="PopupCard">
                     <IconButton className="ClosePopup" size="small" onClick={handleCloseClick}>
                         <CloseIcon fontSize="inherit"/>
+                    </IconButton>
+                    <IconButton className="DeletePopup" size="small" onClick={handleDeleteClick}>
+                        <PersonRemoveIcon fontSize="inherit"/>
                     </IconButton>
                     <div className="Popup-profile">
                         <h2>SS</h2>
