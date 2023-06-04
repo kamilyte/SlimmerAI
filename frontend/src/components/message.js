@@ -57,9 +57,6 @@ function Message({id, text}) {
                     <DeleteIcon fontSize="inherit"/>
                 </IconButton>
             </div>
-            <div className="MessageContainer">
-            <MessageStatus />
-            </div>
         </div>
     )
 }
