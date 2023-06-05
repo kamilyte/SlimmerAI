@@ -156,7 +156,7 @@ const Popup = () => {
                         </dt>
                         <dt className="LargeContainer">
                             <div className="CompanyProspectContent">
-                            NIKE, Inc., named for the Greek goddess of victory, is the world's leading designer, marketer, and distributor of authentic athletic footwear, apparel, equipment, and accessories for a wide variety of sports and fitness activities. 
+                            NIKE, Inc., named for the Greek goddess of victory, is the world's leading designer, marketer, and distributor of authentic athletic footwear, apparel, equipment, and accessories for a wide variety of sports and fitness activities.NIKE, Inc., named for the Greek goddess of victory, is the world's leading NIKE, Inc., named for the Greek goddess of victory, is the world's leading otwear, apparel, equipment, and accessories for a wide variety of sports and fitness activities.NIKE, Inc., named for the Greek goddess of victory, is the world's leading NIKE, Inc., named for the Greek goddess of victory, is the world's leadingotwear, apparel, equipment, and accessories for a wide variety of sports and fitness activities.NIKE, Inc., named for the Greek goddess of victory, is the world's leading NIKE, Inc., named for the Greek goddess of victory, is the world's leadingotwear, apparel, equipment, and accessories for a wide variety of sports and fitness activities.NIKE, Inc., named for the Greek goddess of victory, is the world's leading NIKE, Inc., named for the Greek goddess of victory, is the world's leading
                             </div>
                         </dt>
                         <dt className="WorkListContainer">
@@ -166,7 +166,7 @@ const Popup = () => {
                         </dt>
                         <dt className="LargeContainer">
                             <div className="CompanyProspectContent">
-                            As a product manager, I strive for a user centric approach with a clear focus on UX and data driven decision making (A/B testing, usability testing, customer interviews, market research, customer journey mapping, insights from customer service or feedback tools). 
+                            As a product manager, I strive for a user centric approach with a clear focus on UX and data driven decision making (A/B testing, usability testing, customer interviews, market research, customer journey mapping, insights from customer service or feedback tools) As a product manager, I strive for a user centric approach with a clear focusAs a product manager, I strive for a user centric approach with a clear focusAs a product manager, I strive for a user centric approach with a clear focusAs a product manager, I strive for a user centric approach with a clear focusAs a product manager, I strive for a user centric approach with a clear focusAs a product manager, I strive for a user centric approach with a clear focusAs a product manager, I strive for a user centric approach with a clear focusAs a product manager, I strive for a user centric approach with a clear focus. 
                             </div>
                         </dt>
                     </dl>

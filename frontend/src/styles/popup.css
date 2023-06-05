@@ -163,8 +163,15 @@
     color: #2a2a2a;
     font-size: 0.8vw;
     font-weight: 400;
-    word-wrap: break-word;
-    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+    
+}
+
+.CompanyEmployeeRangeRight::-webkit-scrollbar {
+    display: none;
 }
 
 .CompanyIndustryLeft {
@@ -182,8 +189,14 @@
     color: #2a2a2a;
     font-size: 0.8vw;
     font-weight: 400;
-    word-wrap: break-word;
-    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+}
+
+.CompanyIndustryRight::-webkit-scrollbar {
+    display: none;
 }
 
 .CompanySpecialtiesLeft {
@@ -201,8 +214,14 @@
     color: #2a2a2a;
     font-size: 0.8vw;
     font-weight: 400;
-    word-wrap: break-word;
-    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+}
+
+.CompanySpecialtiesRight::-webkit-scrollbar {
+    display: none;
 }
 
 .CompanyInPositionLeft {
@@ -220,8 +239,14 @@
     color: #2a2a2a;
     font-size: 0.8vw;
     font-weight: 400;
-    word-wrap: break-word;
-    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+}
+
+.CompanyInPositionRight::-webkit-scrollbar {
+    display: none;
 }
 
 .CompanyTypeLeft {
@@ -239,6 +264,14 @@
     color: #2a2a2a;
     font-size: 0.8vw;
     font-weight: 400;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+}
+
+.CompanyTypeRight::-webkit-scrollbar {
+    display: none;
 }
 
 .CompanyProspect {
@@ -257,7 +290,12 @@
     font-size: 0.7vw;
     font-weight: 400;
     word-wrap: break-word;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.CompanyProspectContent::-webkit-scrollbar {
+    display: none;
 }
 
 .LargeContainer {
