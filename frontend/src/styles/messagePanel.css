@@ -1,0 +1,62 @@
+.Header {
+    width: inherit;
+    height: 6.5vw; 
+    position: relative;
+}
+
+.Header h2 {
+    font-size: 2vw;
+    color: black;
+    position: absolute;
+    left: 8vw;
+}
+
+.Header img {
+    position: relative;
+    float: left;
+    top: 3vw;
+    left: 1.25vw;
+    background-color: #a2a4a6;
+    height: 0.1vw;
+    width: 22.5vw;
+}
+
+.container {
+    position: relative;
+}
+
+.Button {
+    height: 2.5vw;
+    width: 23vw;
+    bottom: 0;
+    position: absolute;
+    left: 1vw;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    font-size: 1vw;
+}
+
+.Button:hover {
+    background-color: rgb(242, 244, 245);
+}
+
+.EmptyMessage {
+    position: relative;
+    z-index: 2;
+    border: 1px solid #a2a4a6;
+    border-radius: 20px;
+    width: 23vw;
+    height: 10vw;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 0px 10px;
+    display: flex;
+    text-align: left;
+    color: #838787;
+    overflow: auto;
+    padding-top: 0.5vh;
+    padding-bottom: 1vh;
+    resize: none;
+    margin-top: 10px;
+    margin-left: 2vh;
+}

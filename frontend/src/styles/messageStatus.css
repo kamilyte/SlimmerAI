@@ -1,0 +1,126 @@
+.MessageContacted {
+    background-color: rgb(255, 255, 146);
+    height: 1.6vw;
+    width: 7vw;
+    border-radius: 5px;
+    font-size: 0.7vw;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    padding-top: 0.3vw;
+    margin: 0.1vw;
+}
+
+.MessageContacted:hover {
+    background-color: rgb(245, 245, 141);
+}
+
+.MessageAccepted {
+    background-color: rgb(144, 255, 144);
+    height: 1.6vw;
+    width: 7vw;
+    border-radius: 5px;
+    font-size: 0.7vw;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    padding-top: 0.3vw;
+    margin: 0.1vw;
+}
+
+.MessageAccepted:hover {
+    background-color: rgb(134, 236, 134);
+}
+
+.MessageReacted {
+    background-color: rgb(255, 199, 94);
+    height: 1.6vw;
+    width: 7vw;
+    border-radius: 5px;
+    font-size: 0.7vw;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    padding-top: 0.3vw;
+    margin: 0.1vw;
+}
+
+.MessageReacted:hover {
+    background-color: rgb(237, 186, 91);
+}
+
+.MessageMeetingScheduled {
+    background-color: rgb(255, 157, 157);
+    height: 1.6vw;
+    width: 7vw;
+    border-radius: 5px;
+    font-size: 0.7vw;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    padding-top: 0.3vw;
+    margin: 0.1vw;
+}
+
+.MessageMeetingScheduled:hover {
+    background-color: rgb(232, 142, 142);
+}
+
+.MessageApplied {
+    background-color: rgb(116, 190, 255);
+    height: 1.6vw;
+    width: 7vw;
+    border-radius: 5px;
+    font-size: 0.7vw;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+    padding-top: 0.3vw;
+    margin: 0.1vw;
+}
+
+.MessageApplied:hover {
+    background-color: rgb(108, 177, 238);
+}
+
+.MessageStatus {
+    height: 1.6vw;
+    width: 8.7vw;
+    left: 28vw;
+    top: 5.3vw;
+}
+
+.MessageDropBox {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.MessageStatusDrop {
+    position: relative;
+    height: 1.6vw;
+    width: 1.6vw;
+    left: 7.1vw;
+    bottom: 1.85vw;
+}
+
+.MessageBox {
+    height: 1.6vw;
+    width: 8.7vw;
+    background-color: aqua;
+}
+
+.MessageDropdownContainer {
+    position: absolute;
+    height: 49vw;
+    width: 7.5vw;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+    background-color: aqua;
+    top: 3vw;
+    z-index: 0;
+}

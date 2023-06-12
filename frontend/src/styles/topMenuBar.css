@@ -1,0 +1,84 @@
+.TopMenuBarBox {
+    width: calc(100%);
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+}
+
+.TopMenuBar{
+    width: calc(100%);
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    height: 4.25vw;
+    min-height: 27px;
+    position: relative;
+    transition: 0.5s;
+}
+
+.TopMenuBarExpandedContent{
+    width: calc(100%);
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    height: 7vw;
+    position: relative;
+    transition: 0.5s;
+}
+
+.TopBarContent {
+    height: 7vh;
+}
+
+.TopBarDefaultContent {
+    height: 0;
+    visibility: hidden;
+    width: inherit;
+}
+
+.TopBarExpandedContent {
+    visibility: visible;
+    height: 15vh;
+    width: inherit;
+    background: inherit;
+}
+
+.TopBarDropDownSelection {
+    height: 3vh;
+    width: inherit;
+    display: flex;
+    align-content: center;
+}
+
+.TopBarDropDownButton {
+    align-content: center;
+    display: flex;
+    height: 2vh;
+}
+
+.DropDownIcon {
+    align-content: center;
+    width: 5vh;
+    height: inherit;
+}
+
+.TopMenuBar img {
+    position: relative;
+    background-color: #bdbdbd;
+    height: 0.05vw;
+    width: 98%;
+    left: 1%;
+}
+
+.TopMenuBarExpandedContent img {
+    position: relative;
+    background-color: #bdbdbd;
+    height: 0.05vw;
+    width: 98%;
+    left: 1%;
+}
+.DownIcon {
+    position: absolute;
+    margin-top: 0vw;
+}

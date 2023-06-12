@@ -1,0 +1,91 @@
+.SingleNote {
+    height: max-content;
+    width: 100%;
+    position: relative;
+    padding-bottom: 1.5vw;
+    margin-bottom: 0.5vw;
+}
+
+.SingleNote:hover {
+    background-color: aliceblue;
+}
+
+.NoteProfile {
+    position: relative;
+    height: 1.75vw;
+    width: 1.75vw;
+    background-color: #838dea;
+    border-radius: 50%;
+    float: left;
+}
+
+.NoteProfile h2 {
+    position: relative;
+    font-size: 1vw;
+    top: 0.2vw;
+    left: 0.2vw;
+}
+
+.SingleNote h1 {
+    position: relative;
+    color: black;
+    font-size: 0.75vw;
+    top: 0.35vw;
+    left: 0.3vw;
+    font-weight: 550;
+}
+
+.SingleNote p {
+    position: relative;
+    color: rgb(89, 89, 89);
+    font-size: 0.7vw;
+    font-weight: 500;
+    
+}
+
+.SingleNoteBox {
+    position: relative;
+    color: rgb(89, 89, 89);
+    font-size: 0.7vw;
+    font-weight: 500;
+    left: 2vw;
+    top: 0.7vw;
+    height: 4vw;
+    width: 23vw;
+    padding: 1px;
+    word-wrap: break-word;
+    resize: none;
+    outline: none;
+    background-color: inherit;
+}
+
+.SingleNoteBox::-webkit-scrollbar {
+    display: none;
+}
+
+.SingleNote h3 {
+    position: absolute;
+    color: rgb(110, 110, 110);
+    font-size: 0.5vw;
+    font-weight: 400;
+    bottom: 0;
+    left: 2vw;
+}
+
+.NoteDelete {
+    float: right;
+    top: 0vw;
+}
+
+.NoteDeleteIcon {
+    font-size: 5vw;
+}
+
+.NoteEdit {
+    float: right;
+    bottom: 0vw;
+}
+
+.NoteEditIcon {
+    font-size: 5vw;
+}

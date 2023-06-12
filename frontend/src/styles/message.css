@@ -1,0 +1,57 @@
+
+.MessageButton {
+    position: relative;
+    z-index: 2;
+    border: 1px solid #a2a4a6;
+    border-radius: 20px;
+    width: 23vw;
+    height: 10vw;
+    cursor: pointer;
+    font-size: 11px;
+    padding: 0px 10px;
+    display: flex;
+    text-align: left;
+    color: #838787;
+    overflow: auto;
+    padding-top: 0.5vh;
+    padding-bottom: 1vh;
+    resize: none;
+    top: -0.07vw;
+    left: -0.07vw;
+}
+
+.MessageButton:disabled {
+    background-color: white;
+}
+
+.MessageButton::-webkit-scrollbar {
+    display: none;
+}
+
+.MessageButton:hover {
+    background: #f3f7f7;
+}
+
+.Message {
+    position: relative;
+    border: 1px solid #a2a4a6;
+    border-radius: 20px;
+    width: 23vw;
+    height: 12vw;
+    margin-top: 10px;
+    margin-left: 2vh;
+    z-index: 1;  
+}
+
+.Icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 0.2vw;
+}
+
+.MessageContainer {
+    position: relative;
+    bottom: 0.05vw;
+    left: 0.4vw;
+}

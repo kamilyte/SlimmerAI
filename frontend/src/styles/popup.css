@@ -1,0 +1,395 @@
+
+.Popup {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 95%;
+    display: -webkit-box;
+    margin-left: auto;
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+}
+
+.NoPopup {
+    visibility: hidden;
+}
+
+.PopupCard {
+    position: relative;
+    margin: auto;
+    background-color: rgb(255,255,255);
+    height: 80%;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    overflow: hidden;
+}
+
+.ClosePopup {
+    position: absolute;
+    top: 0px;
+    float: right;
+}
+
+.DeletePopup {
+    position: absolute;
+    top: 0px;
+    float: right;
+}
+
+.Popup-profile {
+    position: absolute;
+    height: 12.5vw;
+    width: 12.5vw;
+    background-color: #838dea;
+    border-radius: 50%;
+    top: 0vw;
+    left: 0vw;
+    margin: 3vw;
+}
+
+.Popup-profile h2 {
+    position: relative;
+    top: 1.1vw;
+    font-size: 7.5vw;
+    left: 1.15vw;
+}
+
+.Popup-name {
+    position: absolute;
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: black;
+    left: 18vw;
+    margin-top: 2vw;
+}
+
+.Popup-position {
+    position: absolute;
+    font-size: 1.5vw;
+    font-weight: 200;
+    color: #101d92;
+    left: 18vw;
+    margin-top: 6.5vw;
+}
+
+.Location {
+    position: absolute;
+    left: 18vw;
+    margin-top: 9vw;
+    height: 1.75vw;
+}
+
+.Location h2 {
+    position: relative;
+    font-size: 1vw;
+    font-weight: 500;
+    color: #bdbdbd;
+    left: 1.5vw;
+    top: 0.1vw;
+}
+
+.LeadList {
+    position: absolute;
+    background-color:rgb(234, 232, 232);
+    height: 1.5vw;
+    width: 15vw;
+    top: 16.5vw;
+    left: 2vw;
+    font-size: 1vw;
+    font-weight: 450;
+    font-style: italic;
+    border-radius: 3px;
+    color: gray;
+    text-align: center;
+}
+
+.Work {
+    position: absolute;
+    height: 1.5vw;
+    width: 17vw;
+    top: 18.5vw;
+    left: 2vw;
+}
+
+.Work h2 {
+    position: absolute;
+    font-size: 0.9vw;
+    font-weight: 700;
+    color: #bdbdbd;
+    float: left;
+}
+
+.Work img {
+    position: relative;
+    float: left;
+    top: 0.9vw;
+    left: 3.25vw;
+    background-color: #bdbdbd;
+    height: 0.1vw;
+    width: 100vw;
+}
+
+.WorkContent {
+    height: 40vh;
+    width: 26vw;
+    position: absolute;
+    top: 20.5vw;
+    left: 2vw;
+}
+
+.WorkListContainer {
+    position: relative;
+    width: 100%;
+    height: 1.5vw;
+}
+
+.CompanyEmployeeRangeLeft {
+    position: absolute;
+    width: 43%;
+    float: left;
+    color: #646464;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+.CompanyEmployeeRangeRight {
+    width: 57%;
+    float: right;
+    color: #2a2a2a;
+    font-size: 0.8vw;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+    
+}
+
+.CompanyEmployeeRangeRight::-webkit-scrollbar {
+    display: none;
+}
+
+.CompanyIndustryLeft {
+    position: absolute;
+    width: 30%;
+    float: left;
+    color: #646464;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+.CompanyIndustryRight {
+    width: 70%;
+    float: right;
+    color: #2a2a2a;
+    font-size: 0.8vw;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+}
+
+.CompanyIndustryRight::-webkit-scrollbar {
+    display: none;
+}
+
+.CompanySpecialtiesLeft {
+    position: absolute;
+    width: 34%;
+    float: left;
+    color: #646464;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+.CompanySpecialtiesRight {
+    width: 66%;
+    float: right;
+    color: #2a2a2a;
+    font-size: 0.8vw;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+}
+
+.CompanySpecialtiesRight::-webkit-scrollbar {
+    display: none;
+}
+
+.CompanyInPositionLeft {
+    position: absolute;
+    width: 18.5%;
+    float: left;
+    color: #646464;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+.CompanyInPositionRight {
+    width: 81.5%;
+    float: right;
+    color: #2a2a2a;
+    font-size: 0.8vw;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+}
+
+.CompanyInPositionRight::-webkit-scrollbar {
+    display: none;
+}
+
+.CompanyTypeLeft {
+    position: absolute;
+    width: 24.5%;
+    float: left;
+    color: #646464;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+.CompanyTypeRight {
+    width: 75.5%;
+    float: right;
+    color: #2a2a2a;
+    font-size: 0.8vw;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 1.15vw;
+}
+
+.CompanyTypeRight::-webkit-scrollbar {
+    display: none;
+}
+
+.CompanyProspect {
+    position: absolute;
+    width: 100%;
+    color: #646464;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+.CompanyProspectContent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #2a2a2a;
+    font-size: 0.7vw;
+    font-weight: 400;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.CompanyProspectContent::-webkit-scrollbar {
+    display: none;
+}
+
+.LargeContainer {
+    position: relative;
+    width: 100%;
+    height: 25%;
+}
+
+.Rating {
+    position: relative;
+    height: 3vw;
+    width: 8vw;
+    left: 18vw;
+    top: 11.3vw;
+}
+
+.Rating h2 {
+    color: rgb(211, 211, 211);
+    font-size: 0.75vw;
+    font-weight: 650;
+}
+
+.OpenToWork {
+    position: relative;
+    height: 3vw;
+    width: 8vw;
+    left: 18vw;
+    top: 11.5vw;
+}
+
+.OpenToWork h2{
+    color: rgb(211, 211, 211);
+    font-size: 0.75vw;
+    font-weight: 650;
+}
+
+
+.Notes {
+    height: 1.5vw;
+    width: 27vw;
+    position: absolute;
+    top: 17.9vw;
+    left: 29vw;
+}
+
+.NotesIcon {
+    float: left;
+    transform: rotate(310deg);
+    color: black;
+    margin-top: 0.5%;
+}
+
+.Notes h2 {
+    font-size: 1vw;
+    font-weight: 550;
+    color: #020202;
+    float: left;
+    margin-top: 0.1vw;
+}
+
+.Notes img {
+    float: left;
+    background-color: #bdbdbd;
+    height: 0.13vw;
+    width: 100vw;
+}
+
+.NotesContent {
+    height: 35vh;
+    width: 26vw;
+    position: relative;
+    top: 11vw;
+    left: 29vw;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.NotesContent::-webkit-scrollbar {
+    display: none;
+}
+
+.AddNotes {
+    position: relative;
+    background-color: rgb(237, 234, 234);
+    height: 2vw;
+    width: 27vw;
+    resize: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0.4vw;
+    overflow: hidden;
+    color: black;
+    font-size: 0.8vw;
+    outline: none;
+    left: 29vw;
+    top: 11vw;
+}
